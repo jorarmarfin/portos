@@ -18,16 +18,20 @@
                     {!!Form::menulink('Configuracion','#','fa fa-cogs')!!}
                     <ul class="sub-menu">
                         {!!Form::menu('Maestro',route('catalogo.gestion','maestro'))!!}
+                        {!!Form::menu('Roles',route('catalogo.gestion','roles'))!!}
                     </ul>
                 </li>
                 {!!Form::menu('Aulas',route('home.index'),'fa fa-cubes')!!}
             @endcan
 
-            @can('admin',Auth::user())
-                <li class="heading">
-                    <h3 class="uppercase">Modulos</h3>
-                </li>
-                {!!Form::menu('Menu',route('home.index'),'fa fa-users')!!}
+            <li class="heading">
+                <h3 class="uppercase">Modulos</h3>
+            </li>
+            @can('IsFoto',Auth::user())
+                @can('IsAdmin',Auth::user())
+                    {!!Form::menu('Administrador','#','fa fa-users')!!}
+                @endcan
+                {!!Form::menu('Foto','#','fa fa-users')!!}
             @endcan
         </ul>
         <!-- END SIDEBAR MENU -->

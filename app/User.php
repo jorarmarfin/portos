@@ -2,8 +2,9 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
+use App\Models\Catalogo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -16,6 +17,14 @@ class User extends Authenticatable
      */
     protected $fillable = ['name', 'email', 'password','idrole','foto','activo'];
 
+    /**
+    * Atributos Codigo Rol
+    */
+    public function getCodigoRolAttribute()
+    {
+        $rol = Catalogo::find($this->idrole);
+        return $rol->codigo;
+    }
     /**
      * The attributes that should be hidden for arrays.
      *
