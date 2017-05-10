@@ -23,7 +23,7 @@
 				</div>
 				<div class="form-group">
 					<div class="col-sm-4">
-						<img src="{{ asset('/storage/fotos/'.Auth::user()->foto) }}" width="30%">
+						<img src="{{ Auth::user()->mostrar_foto }}" width="30%">
 						{!!Form::file('file',['class'=>'form-control'])!!}
 					</div>
 				</div>
@@ -41,7 +41,7 @@
 @stop
 
 @section('user-img')
-{{ asset('/storage/fotos/'.Auth::user()->foto) }}
+{{ Auth::user()->mostrar_foto }}
 @stop
 
 @section('menu-user')
