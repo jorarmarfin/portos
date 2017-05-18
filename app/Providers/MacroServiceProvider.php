@@ -20,6 +20,7 @@ class MacroServiceProvider extends ServiceProvider
         $this->ControlBotonModal();
         $this->ControlMenu();
         $this->ControlMenuLink();
+        $this->ControlBFile();
     }
 
     /**
@@ -78,5 +79,13 @@ class MacroServiceProvider extends ServiceProvider
     {
         $macro = new Macros();
         return $macro->MenuLink();
+    }
+    /**
+     * Bootstrap File input
+     */
+    public function ControlBFile()
+    {
+        $macro = new Macros();
+        return $macro->BFile();
     }
 }

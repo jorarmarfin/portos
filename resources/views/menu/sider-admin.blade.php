@@ -9,7 +9,7 @@
             </li>
             <!-- END SIDEBAR TOGGLER BUTTON -->
             {!!Form::menu('Escritorio',route('home.index'),'icon-home','start')!!}
-            @can('admin',Auth::user())
+            @can('IsAdmin',Auth::user())
                 <li class="heading">
                     <h3 class="uppercase">Sistema</h3>
                 </li>

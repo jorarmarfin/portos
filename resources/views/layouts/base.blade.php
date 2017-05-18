@@ -77,7 +77,7 @@
     {!! Html::script(asset('assets/global/scripts/datatable.js')) !!}
     {!! Html::script(asset('assets/global/plugins/datatables/datatables.min.js')) !!}
     {!! Html::script(asset('assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js')) !!}
-
+    {!! Html::script(asset('assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js')) !!}
     @yield('js-scripts')
     <!-- END PLUGINS SCRIPTS -->
     <!-- BEGIN PERSONAL SCRIPTS -->

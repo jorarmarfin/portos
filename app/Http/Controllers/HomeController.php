@@ -29,7 +29,7 @@ class HomeController extends Controller
                 break;
 
             default:
-                return view('admin.index');
+                return view('index');
                 break;
         }
     }

@@ -122,6 +122,53 @@ class Macros extends FormBuilder
 		});
 
 	}
+	/**
+	 * Bootstrap Input File
+	 */
+	public function BFile()
+	{
+
+		Form::macro('bfile',function($name,$color='default',$tipo=0){
+			switch ($tipo) {
+				case 1:
+					$control = '
+                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                    <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                        <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt=""> </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 10px;"></div>
+                                    <div>
+                                        <span class="btn '.$color.' btn-file">
+                                            <span class="fileinput-new"> Seleccionar archivo </span>
+                                            <span class="fileinput-exists"> Cambiar </span>
+                                            <input type="hidden" value="" name="'.$name.'"><input type="file" name=""> </span>
+                                        <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Quitar </a>
+                                    </div>
+                                </div>
+							';
+					break;
+
+				default:
+					$control = '
+					            <div class="fileinput fileinput-new" data-provides="fileinput">
+						            <div class="input-group input-large">
+						                <div class="form-control uneditable-input input-fixed input-medium" data-trigger="fileinput">
+						                    <i class="fa fa-file fileinput-exists"></i>&nbsp;
+						                    <span class="fileinput-filename"> </span>
+						                </div>
+						                <span class="input-group-addon btn '.$color.' btn-file">
+						                    <span class="fileinput-new"> Seleccionar archivo </span>
+						                    <span class="fileinput-exists"> Cambiar </span>
+						                    <input type="file" name="'.$name.'"> </span>
+						                <a href="javascript:;" class="input-group-addon btn red fileinput-exists" data-dismiss="fileinput"> Quitar </a>
+						            </div>
+						        </div>
+							';
+					break;
+			}
+			return $control;
+		});
+
+	}
 
 }
 

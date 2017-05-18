@@ -6,4 +6,6 @@
 <!-- DataTable-->
 {!! Html::style(asset('assets/global/plugins/datatables/datatables.min.css')) !!}
 {!! Html::style(asset('assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css')) !!}
+<!-- Bootstrap File Input -->
+{!! Html::style(asset('assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css')) !!}
 @yield('plugins-styles','')

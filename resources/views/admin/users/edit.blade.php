@@ -22,9 +22,9 @@
 					{!!Form::select('idrole',$roles,null, ['class'=>'form-control']);!!}
 				</div>
 				<div class="form-group">
-					<div class="col-sm-4">
-						<img src="{{ Auth::user()->mostrar_foto }}" width="30%">
-						{!!Form::file('file',['class'=>'form-control'])!!}
+					<div class="col-sm-4 ">
+						<img src="{{ Auth::user()->mostrar_foto }}" width="30%" class="margin-bottom-20">
+						{!!Form::bfile('file','green')!!}
 					</div>
 				</div>
 

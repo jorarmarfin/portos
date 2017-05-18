@@ -10,7 +10,7 @@
             <div class="portlet-title">
                 <div class="caption">
                     <i class="fa fa-table"></i>
-                    Lista de Alumnos
+                    Portlet
                 </div>
                 <div class="tools">
                     <a href="javascript:;" class="collapse"> </a>
@@ -19,10 +19,7 @@
                 </div>
             </div>
             <div class="portlet-body">
-            {!!Form::boton('Nuevo Alumno','#','green','fa fa-plus')!!}
-            {!!Form::boton('Asistencia','#','green-meadow','fa fa-check')!!}
-            {!!Form::boton('Padres con email pendiente','#','green-seagreen','fa fa-edit')!!}
-            <p></p>
+
             </div>
         </div>
         <!-- END Portlet PORTLET-->
@@ -41,7 +38,7 @@
 @stop
 
 @section('user-img')
-{{ asset('storage/fotos/'.Auth::user()->foto) }}
+{!! Auth::user()->mostrar_foto !!}
 @stop
 
 @section('user-name')

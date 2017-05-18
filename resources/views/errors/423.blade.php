@@ -5,6 +5,6 @@
 423
 @stop
 
-@section('numero-error')
+@section('mensaje-error')
 No tiene acceso a esta pagina
 @stop
