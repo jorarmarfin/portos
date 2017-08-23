@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','idrole','foto','activo'
     ];
 
     /**
@@ -32,5 +32,13 @@ class User extends Authenticatable
     public function setPasswordAttribute($value)
     {
         $this->attributes['password'] = bcrypt($value);
+    }
+    /**
+     * Establecemos el la relacion con catalogo
+     * @return [type] [description]
+     */
+    public function role()
+    {
+        return $this->hasOne('\App\Models\Catalogo','id','idrole');
     }
 }
