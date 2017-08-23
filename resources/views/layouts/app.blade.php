@@ -31,8 +31,6 @@
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
-                    <a class="navbar-brand" href="{{ route('post.create') }}">Crear Post </a>
-                    <a class="navbar-brand" href="{{ route('post.index') }}">Ver Posts </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
