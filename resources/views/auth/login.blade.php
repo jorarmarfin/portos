@@ -21,7 +21,7 @@
             <i class="fa fa-lock"></i>
             <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" /> </div>
         <p></p>
-        <button type="submit" class="btn green btn-block"> Login </button>
+        <button type="submit" class="btn green btn-block"> ENTRAR </button>
     </div>
     <div class="forget-password">
         <h4>Olvidaste tu contraseña ?</h4>

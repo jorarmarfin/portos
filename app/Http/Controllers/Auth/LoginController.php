@@ -37,7 +37,15 @@ class LoginController extends Controller
 
     public function redirectTo()
     {
-        dd('redirige');
+        switch (Auth::user()->codigo_rol) {
+            case 'root':
+                return '/home';
+                break;
+
+            default:
+                # code...
+                break;
+        }
     }
     /**
      * Get the needed authorization credentials from the request.
