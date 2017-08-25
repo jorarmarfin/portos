@@ -2,8 +2,9 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
+use App\Models\Catalogo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -15,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','idrole','foto','activo'
     ];
 
     /**
@@ -32,5 +33,21 @@ class User extends Authenticatable
     public function setPasswordAttribute($value)
     {
         $this->attributes['password'] = bcrypt($value);
+    }
+    /**
+    * Atributos Rol
+    */
+    public function getCodigoRolAttribute()
+    {
+        $role = Catalogo::find($this->idrole);
+        return $role->codigo;
+    }
+    /**
+     * Establecemos el la relacion con catalogo
+     * @return [type] [description]
+     */
+    public function role()
+    {
+        return $this->hasOne(Catalogo::class,'id','idrole');
     }
 }
