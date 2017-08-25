@@ -73,6 +73,27 @@ return [
                 'checkbox' => '',
                 'error' => 'input-with-feedback'
             ],
+        ],
+        'metronic' => [
+            /*
+             * Set a specific HTML template for a field type if the
+             * type is not set, the default template will be used
+             */
+            'field_templates' => [
+                // type => template
+                'checkbox' => 'checkbox',
+                'checkboxes' => 'collections',
+                'radios' => 'collections'
+            ],
+            /*
+             * Set the default classes for each field type
+             */
+            'field_classes' => [
+                // type => class or classes
+                'default' => 'form-control',
+                'checkbox' => '',
+                'error' => 'input-with-feedback'
+            ],
         ]
     ]
 

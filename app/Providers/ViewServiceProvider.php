@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\ViewComposers\ControlMenu;
 use App\Http\ViewComposers\SectionsData;
 use Illuminate\Support\ServiceProvider;
 
@@ -17,6 +18,10 @@ class ViewServiceProvider extends ServiceProvider
         view()->composer(
             ['layouts.admin'],
             SectionsData::class
+            );
+        view()->composer(
+            ['menu.sider'],
+            ControlMenu::class
             );
     }
 
