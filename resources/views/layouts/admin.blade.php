@@ -5,7 +5,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>Metronic Admin Theme #2 | Blank Page Layout</title>
+        <title>@yield('title','Metronic Admin Theme #2 | Blank Page Layout')</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="Preview page of Metronic Admin Theme #2 for blank page layout" name="description" />
@@ -36,7 +36,7 @@
             <div class="page-header-inner ">
                 <!-- BEGIN LOGO -->
                 <div class="page-logo">
-                    <a href="index.html">
+                    <a href="{{ route('home.index') }}">
                         <img src="{{ asset('assets/layouts/layout2/img/logo-system.png') }}" alt="logo" class="logo-default" /> </a>
                     <div class="menu-toggler sidebar-toggler">
                         <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
@@ -109,7 +109,7 @@
         <!-- BEGIN CONTAINER -->
         <div class="page-container">
             <!-- BEGIN SIDEBAR -->
-            @include('menu.sider')
+            @yield('menu-sider')
             <!-- END SIDEBAR -->
             <!-- BEGIN CONTENT -->
             <div class="page-content-wrapper">
@@ -137,6 +137,7 @@
                         </div>
                     </div>
                     <!-- END PAGE HEADER-->
+                    @yield('content')
                     <div class="note note-info">
                         <p> A black page template with a minimal dependency assets to use as a base for any custom page you create </p>
                     </div>
