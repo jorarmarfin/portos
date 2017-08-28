@@ -12,13 +12,20 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        $root = Catalogo::idroot();
         factory(App\User::class)->create([
             'name' => 'Luis Fernando',
             'username' => 'lmayta',
             'email' => 'luis.mayta@gmail.com',
             'password' => '321654987',
-            'idrole' => $root->id,
+            'idrole' => Catalogo::IdCatalogo('ROLES','C','root'),
+            'activo' => true,
+            ]);
+        factory(App\User::class)->create([
+            'name' => 'Lucy Sanchez',
+            'username' => 'lsanchez',
+            'email' => 'lucy.sanchez@gmail.com',
+            'password' => '321654987',
+            'idrole' => Catalogo::IdCatalogo('ROLES','C','admin'),
             'activo' => true,
             ]);
     }

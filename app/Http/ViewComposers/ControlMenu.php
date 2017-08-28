@@ -21,7 +21,7 @@ class ControlMenu
 							'Usuarios'=>[]
 						]
 			],
-			'contact-us' => ['full_url' => 'http://contact.us']
+			'contact-us' => ['full_url' => 'http://contact.us','roles'=>'root']
 		];
 		$view->with(compact('items'));
 	}
