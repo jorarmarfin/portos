@@ -17,7 +17,7 @@ class ControlMenu
 			'Inicio' => ['route' => 'home.index', 'icon' => 'icon-home'],
 			'Configuracion' => ['icon'=>'icon-settings',
 						'submenu'=>[
-							'Catalogo'=>['roles'=>['root']],
+							'Catalogo'=>['route'=>'catalogo.index','roles'=>['root']],
 							'Usuarios'=>['roles'=>['root']]
 						]
 			],

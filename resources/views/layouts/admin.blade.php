@@ -20,6 +20,7 @@
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="{{ asset('assets/global/css/components.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
         <link href="{{ asset('assets/global/css/plugins.min.css') }}" rel="stylesheet" type="text/css" />
+        @include('layouts.plugins-css')
         <!-- END THEME GLOBAL STYLES -->
         <!-- BEGIN THEME LAYOUT STYLES -->
         <link href="{{ asset('assets/layouts/layout2/css/layout.min.css') }}" rel="stylesheet" type="text/css" />
@@ -137,9 +138,6 @@
                         </div>
                     </div>
                     <!-- END PAGE HEADER-->
-                    <div class="note note-info">
-                        <p> A black page template with a minimal dependency assets to use as a base for any custom page you create </p>
-                    </div>
                     @yield('content')
                 </div>
                 <!-- END CONTENT BODY -->
@@ -169,9 +167,11 @@
             <script src="{{ asset('assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
             <script src="{{ asset('assets/global/plugins/jquery.blockui.min.js') }}" type="text/javascript"></script>
             <script src="{{ asset('assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js') }}" type="text/javascript"></script>
+
             <!-- END CORE PLUGINS -->
             <!-- BEGIN THEME GLOBAL SCRIPTS -->
-            <script src="{{ asset('assets/global/scripts/app.min.js') }}" type="text/javascript"></script>
+
+            @include('layouts.plugins-js')
             <!-- END THEME GLOBAL SCRIPTS -->
             <!-- BEGIN THEME LAYOUT SCRIPTS -->
             <script src="{{ asset('assets/layouts/layout2/scripts/layout.min.js') }}" type="text/javascript"></script>
@@ -186,8 +186,21 @@
                     {
                         $('#radio1003').attr('checked', 'checked');
                     });
+
+                    var mitabla = $('.MyTabla');
+                    mitabla.dataTable({
+                        "language": {
+                            "emptyTable": "No hay datos disponibles",
+                            "info": "Mostrando _START_ a _END_ de _TOTAL_ filas",
+                            "search": "Buscar :",
+                            "lengthMenu": "_MENU_ registros"
+                        },
+
+                    });
                 })
+
             </script>
+            @yield('js-scripts')
     </body>
 
 </html>
