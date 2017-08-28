@@ -17,11 +17,11 @@ class ControlMenu
 			'Inicio' => ['route' => 'home.index', 'icon' => 'icon-home'],
 			'Configuracion' => ['icon'=>'icon-settings',
 						'submenu'=>[
-							'Catalogo'=>[],
-							'Usuarios'=>[]
+							'Catalogo'=>['roles'=>['root']],
+							'Usuarios'=>['roles'=>['root']]
 						]
 			],
-			'contact-us' => ['full_url' => 'http://contact.us','roles'=>'root']
+			'contact-us' => ['full_url' => 'http://contact.us','roles'=>['admin','root']]
 		];
 		$view->with(compact('items'));
 	}

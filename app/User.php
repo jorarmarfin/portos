@@ -37,7 +37,7 @@ class User extends Authenticatable
     /**
     * Atributos Rol
     */
-    public function getRolesAttribute()
+    public function getRoleAttribute()
     {
         $role = Catalogo::find($this->idrole);
         return $role->codigo;
