@@ -1,18 +1,24 @@
 @extends('layouts.admin')
 
 @section('content')
+{!! Alert::render() !!}
+@component('components.barra-titulo-light',['title'=>'Tabla '.$id,'icon'=>'fa fa-table'])
+    <a href="javascript:;" class="icon-btn">
+        <i class="fa fa-bar-chart-o"></i>
+        <div> Reports </div>
+    </a>
+    <a href="javascript:;" class="icon-btn">
+        <i class="fa fa-bar-chart-o"></i>
+        <div> Reports </div>
+    </a>
+@endcomponent
 <div class="row">
-	<div class="col-md-12">
-		@component('components.portlet-light')
-			@slot('title','Tabla Catalogo')
-			@slot('icon','fa fa-table')
-
+    <div class="col-md-12">
+        @component('components.portlet-light')
             <table class="table table-bordered table-hover" id="Tabla">
                 <thead>
                     <tr>
                         <th> Id </th>
-                        <th> idtable </th>
-                        <th> iditem </th>
                         <th> Codigo </th>
                         <th> Nombre </th>
                         <th> Descripcion </th>
@@ -24,14 +30,18 @@
                 <tbody>
                 @foreach ($Lista as $item)
                     <tr>
-                        <td> {{ $item->id }} </td>
-                        <td> {{ $item->idtable }} </td>
                         <td> {{ $item->iditem }} </td>
                         <td> {{ $item->codigo }} </td>
                         <td> {{ $item->nombre }} </td>
                         <td> {{ $item->descripcion }} </td>
                         <td> {{ $item->valor }} </td>
-                        <td> {{ $item->activo }} </td>
+                        <td>
+                        @if ($item->activo)
+                            <a href="{{ route('catalogo.activar',['catalogo',$item->id,0]) }}" class="label label-sm label-info"> SI </a>
+                        @else
+                            <a href="{{ route('catalogo.activar',['catalogo',$item->id,1]) }}" class="label label-sm label-danger"> NO </a>
+                        @endif
+                        </td>
                         <td> {{ $item->id }} </td>
                     </tr>
                 @endforeach

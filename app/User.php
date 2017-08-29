@@ -28,6 +28,14 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     /**
+    * Atributos Foto
+    */
+    public function getUserFotoAttribute()
+    {
+        $foto = asset('/storage/'.$this->foto);
+        return $foto;
+    }
+    /**
      * Atributos de la clase Users
      */
     public function setPasswordAttribute($value)

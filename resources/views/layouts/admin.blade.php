@@ -17,10 +17,12 @@
         <link href="{{ asset('assets/global/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        @include('layouts.plugins-css')
+        <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="{{ asset('assets/global/css/components.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
         <link href="{{ asset('assets/global/css/plugins.min.css') }}" rel="stylesheet" type="text/css" />
-        @include('layouts.plugins-css')
         <!-- END THEME GLOBAL STYLES -->
         <!-- BEGIN THEME LAYOUT STYLES -->
         <link href="{{ asset('assets/layouts/layout2/css/layout.min.css') }}" rel="stylesheet" type="text/css" />
@@ -80,7 +82,7 @@
                             <li class="dropdown dropdown-user">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                     <img alt="" class="img-circle" src="../assets/layouts/layout2/img/avatar3_small.jpg" />
-                                    <span class="username username-hide-on-mobile"> Nick </span>
+                                    <span class="username username-hide-on-mobile"> {{ $username }} </span>
                                     <i class="fa fa-angle-down"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
@@ -122,9 +124,6 @@
                         @include('sections.panel')
                     @endif
                     <!-- END THEME PANEL -->
-                    <h1 class="page-title"> Blank Page Layout
-                        <small>blank page layout</small>
-                    </h1>
                     <div class="page-bar {{ $pagebar }}">
                         @if ($breadcrumb)
                             @include('sections.breadcrumb')
@@ -138,6 +137,7 @@
                         </div>
                     </div>
                     <!-- END PAGE HEADER-->
+
                     @yield('content')
                 </div>
                 <!-- END CONTENT BODY -->
@@ -169,9 +169,11 @@
             <script src="{{ asset('assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js') }}" type="text/javascript"></script>
 
             <!-- END CORE PLUGINS -->
-            <!-- BEGIN THEME GLOBAL SCRIPTS -->
-
+            <!-- BEGIN PAGE LEVEL PLUGINS -->
             @include('layouts.plugins-js')
+            <!-- END PAGE LEVEL PLUGINS -->
+            <!-- BEGIN THEME GLOBAL SCRIPTS -->
+            <script src="{{ asset('assets/global/scripts/app.min.js') }}" type="text/javascript"></script>
             <!-- END THEME GLOBAL SCRIPTS -->
             <!-- BEGIN THEME LAYOUT SCRIPTS -->
             <script src="{{ asset('assets/layouts/layout2/scripts/layout.min.js') }}" type="text/javascript"></script>
