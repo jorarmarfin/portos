@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Catalogo;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Catalogo;
+use App\Traits\RecordActivate;
+use Illuminate\Http\Request;
 
 class CatalogoController extends Controller
 {
+    use RecordActivate;
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +17,8 @@ class CatalogoController extends Controller
      */
     public function index()
     {
-        return view('catalogo.index');
+        $Lista = Catalogo::orderBy('id')->get();
+        return view('catalogo.index',compact('Lista'));
     }
 
     /**
@@ -24,7 +28,7 @@ class CatalogoController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -46,7 +50,8 @@ class CatalogoController extends Controller
      */
     public function show($id)
     {
-        //
+        $Lista = Catalogo::Table($id)->get();
+        return view('catalogo.show',compact('Lista','id'));
     }
 
     /**

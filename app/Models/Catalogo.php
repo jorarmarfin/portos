@@ -13,6 +13,7 @@ class Catalogo extends Model
      * Busca una tabla de maestro
      */
 	public function Maestro($NameTable){
+		$NameTable = strtoupper($NameTable);
 		$data=$this->select('iditem')
 				   ->where('idtable',0)
 			       ->where('nombre',"$NameTable")->first();
