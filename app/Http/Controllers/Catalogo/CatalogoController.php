@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Catalogo;
 use App\Traits\RecordActivate;
 use Illuminate\Http\Request;
-
+use Alert;
 class CatalogoController extends Controller
 {
     use RecordActivate;
@@ -26,9 +26,9 @@ class CatalogoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-
+        return view('catalogo.create',compact('id'));
     }
 
     /**
@@ -39,7 +39,13 @@ class CatalogoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $Lista = Catalogo::Table($request->id)->get();
+        $data = $request->all();
+        $data['idtable'] = $Lista->last()->idtable;
+        $data['iditem'] = $Lista->last()->iditem+1;
+        Catalogo::create($data);
+        Alert::success($request->id.' Registrado con exito');
+        return redirect()->route('catalogo.show',$request->id);
     }
 
     /**
@@ -62,7 +68,9 @@ class CatalogoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $catalogo = Catalogo::find($id);
+        $id = Catalogo::SearchNameTable($catalogo->idtable);
+        return view('catalogo.edit',compact('catalogo','id'));
     }
 
     /**
@@ -74,7 +82,13 @@ class CatalogoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $catalogo = Catalogo::find($id);
+        $catalogo->fill($request->all());
+        $catalogo->save();
+        $Lista = Catalogo::SearchTable($catalogo->idtable)->get();
+        $id = Catalogo::SearchNameTable($catalogo->idtable);
+        Alert::success('Registro actualizado con exito');
+        return view('catalogo.show',compact('Lista','id'));
     }
 
     /**
@@ -83,8 +97,13 @@ class CatalogoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $catalogo = Catalogo::find($id);
+        $Lista = Catalogo::SearchTable($catalogo->idtable)->get();
+        $id = Catalogo::SearchNameTable($catalogo->idtable);
+        Alert::success('Registro actualizado con exito');
+        $catalogo->delete();
+        return redirect()->route('catalogo.show',$id);
     }
 }

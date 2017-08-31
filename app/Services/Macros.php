@@ -52,7 +52,7 @@ class Macros extends FormBuilder
 	 */
 	public function Boton()
 	{
-		Form::macro('boton',function($name,$url,$color = '',$icon = null,$botonclass=null,$data = []){
+		Form::macro('boton',function($name,$url,$color = '',$icon = null,$botonclass='btn',$data = []){
 			$iconclass = (isset($icon)) ? '<i class="'.$icon.'"></i>' : '' ;
 			$atributos = '';
 
@@ -61,7 +61,7 @@ class Macros extends FormBuilder
 			}
 
 			return '
-				<a href="'.$url.'" class="btn '.$botonclass.' '.$color.'" '.$atributos.'>
+				<a href="'.$url.'" class=" '.$botonclass.' '.$color.'" '.$atributos.'>
 	                '.$iconclass.'
 	                '.$name.'
 	            </a>

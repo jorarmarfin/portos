@@ -3,13 +3,9 @@
 @section('content')
 {!! Alert::render() !!}
 @component('components.barra-titulo-light',['title'=>'Tabla '.$id,'icon'=>'fa fa-table'])
-    <a href="javascript:;" class="icon-btn">
-        <i class="fa fa-bar-chart-o"></i>
-        <div> Reports </div>
-    </a>
-    <a href="javascript:;" class="icon-btn">
-        <i class="fa fa-bar-chart-o"></i>
-        <div> Reports </div>
+    <a href="{{ route('catalogo.create',$id) }}" class="icon-btn">
+        <i class="fa fa-plus"></i>
+        <div> Nuevo </div>
     </a>
 @endcomponent
 <div class="row">
@@ -43,6 +39,7 @@
                         @endif
                         </td>
                         <td>
+<<<<<<< HEAD
                         <a href="javascript:;" class="btn btn-xs green" title="Editar">
                             <i class="fa fa-edit"></i>
                         </a>
@@ -50,6 +47,10 @@
                             <i class="fa fa-trash"></i>
                         </a>
                         {{ $item->id }}
+=======
+                        {!!Form::boton('Edit',route('catalogo.edit',$item->id),'green','fa fa-edit','btn btn-xs')!!}
+                        {!!Form::boton('Delete',route('catalogo.delete',$item->id),'red-pink','fa fa-trash','btn btn-xs')!!}
+>>>>>>> release/v.0.0.9
                         </td>
                     </tr>
                 @endforeach
