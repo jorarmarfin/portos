@@ -39,18 +39,8 @@
                         @endif
                         </td>
                         <td>
-<<<<<<< HEAD
-                        <a href="javascript:;" class="btn btn-xs green" title="Editar">
-                            <i class="fa fa-edit"></i>
-                        </a>
-                        <a href="javascript:;" class="btn btn-xs red" title="Eliminar">
-                            <i class="fa fa-trash"></i>
-                        </a>
-                        {{ $item->id }}
-=======
                         {!!Form::boton('Edit',route('catalogo.edit',$item->id),'green','fa fa-edit','btn btn-xs')!!}
                         {!!Form::boton('Delete',route('catalogo.delete',$item->id),'red-pink','fa fa-trash','btn btn-xs')!!}
->>>>>>> release/v.0.0.9
                         </td>
                     </tr>
                 @endforeach
