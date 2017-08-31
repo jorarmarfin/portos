@@ -3,13 +3,9 @@
 @section('content')
 {!! Alert::render() !!}
 @component('components.barra-titulo-light',['title'=>'Tabla '.$id,'icon'=>'fa fa-table'])
-    <a href="javascript:;" class="icon-btn">
-        <i class="fa fa-bar-chart-o"></i>
-        <div> Reports </div>
-    </a>
-    <a href="javascript:;" class="icon-btn">
-        <i class="fa fa-bar-chart-o"></i>
-        <div> Reports </div>
+    <a href="{{ route('catalogo.create',$id) }}" class="icon-btn">
+        <i class="fa fa-plus"></i>
+        <div> Nuevo </div>
     </a>
 @endcomponent
 <div class="row">
@@ -42,7 +38,10 @@
                             <a href="{{ route('catalogo.activar',['catalogo',$item->id,1]) }}" class="label label-sm label-danger"> NO </a>
                         @endif
                         </td>
-                        <td> {{ $item->id }} </td>
+                        <td>
+                        {!!Form::boton('Edit',route('catalogo.edit',$item->id),'green','fa fa-edit','btn btn-xs')!!}
+                        {!!Form::boton('Delete',route('catalogo.delete',$item->id),'red-pink','fa fa-trash','btn btn-xs')!!}
+                        </td>
                     </tr>
                 @endforeach
 
@@ -61,7 +60,7 @@ $('#Tabla').dataTable({
     "language": {
         "emptyTable": "No hay datos disponibles",
         "info": "Mostrando _START_ a _END_ de _TOTAL_ filas",
-        "search": "Buscar Postulante :",
+        "search": "Buscar:",
         "lengthMenu": "_MENU_ registros"
     },
 

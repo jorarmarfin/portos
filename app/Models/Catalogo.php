@@ -60,4 +60,22 @@ class Catalogo extends Model
                          ->where('activo',1)
                          ->first();
     }
+    /**
+     * Devuelve la tabla buscando por el id de la tabla
+     * @param integer $iditem idtable
+     */
+    public static function SearchTable($iditem)
+    {
+    	$catalogo = Catalogo::select('nombre')->where('idtable',0)->where('iditem',$iditem)->first();
+    	return Catalogo::Table($catalogo->nombre);
+    }
+    /**
+     * Devuelve el nombre de la tabla buscando por el id de la tabla
+     * @param integer $iditem idtable
+     */
+    public static function SearchNameTable($iditem)
+    {
+    	$catalogo = Catalogo::select('nombre')->where('idtable',0)->where('iditem',$iditem)->first();
+    	return $catalogo->nombre;
+    }
 }
