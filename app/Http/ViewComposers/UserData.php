@@ -13,7 +13,7 @@ class UserData
 	 */
 	public function compose(View $view)
 	{
-		$username = Auth::user()->name;
+		$username = (is_null(Auth::user())) ? 'Usuario' : Auth::user()->name ;
 		$view->with(compact('username'));
 	}
 }
