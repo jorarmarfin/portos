@@ -19,7 +19,8 @@ class ControlMenu
 						'submenu'=>[
 							'Catalogo'=>['route'=>'catalogo.index','roles'=>['root']],
 							'Secciones'=>['route'=>['catalogo.show','secciones'],'roles'=>['root']],
-							'Roles'=>['route'=>['catalogo.show','roles'],'roles'=>['root']]
+							'Roles'=>['route'=>['catalogo.show','roles'],'roles'=>['root']],
+							'Usuarios'=>['route'=>['catalogo.show','roles'],'roles'=>['root']]
 						]
 			],
 			'contact-us' => ['full_url' => 'http://contact.us','roles'=>['admin','root']]

@@ -112,7 +112,7 @@
         <!-- BEGIN CONTAINER -->
         <div class="page-container">
             <!-- BEGIN SIDEBAR -->
-            @yield('menu-sider')
+            {!! Menu::make($items)->render('themes.metronic.menu') !!}
             <!-- END SIDEBAR -->
             <!-- BEGIN CONTENT -->
             <div class="page-content-wrapper">

@@ -18,7 +18,7 @@ class ViewServiceProvider extends ServiceProvider
     {
         view()->composer('layouts.admin',UserData::class);
         view()->composer('layouts.admin',SectionsData::class);
-        view()->composer('menu.sider',ControlMenu::class);
+        view()->composer('layouts.admin',ControlMenu::class);
     }
 
     /**
