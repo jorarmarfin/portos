@@ -68,13 +68,5 @@ $('#Tabla').dataTable({
 </script>
 @stop
 
+@section('title','Escritorio')
 
-
-
-@section('title')
-Escritorio
-@endsection
-
-@section('menu-sider')
-@include('menu.sider')
-@stop

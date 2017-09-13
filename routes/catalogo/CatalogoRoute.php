@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['namespace'=>'Catalogo'], function() {
+Route::group(['namespace'=>'Catalogo','middleware'=>'auth'], function() {
 	Route::resource('catalogo','CatalogoController',['only'=>['index','show','edit','update','store']]);
 	Route::get('activar/{tabla}/{id}/{sw}','CatalogoController@activate')->name('catalogo.activar');
 	Route::get('create/{id}','CatalogoController@create')->name('catalogo.create');

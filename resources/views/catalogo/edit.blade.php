@@ -41,6 +41,3 @@
 
 @section('title','Catalogo')
 
-@section('menu-sider')
-@include('menu.sider')
-@stop

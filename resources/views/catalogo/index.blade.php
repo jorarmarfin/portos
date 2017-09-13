@@ -51,21 +51,15 @@ $('#Tabla').dataTable({
     "language": {
         "emptyTable": "No hay datos disponibles",
         "info": "Mostrando _START_ a _END_ de _TOTAL_ filas",
-        "search": "Buscar Postulante :",
+        "search": "Buscar :",
         "lengthMenu": "_MENU_ registros"
     },
+    "bProcessing": true,
+    "pagingType": "bootstrap_full_number",
 
 });
 </script>
 @stop
 
+@section('title','Catalogo')
 
-
-
-@section('title')
-Escritorio
-@endsection
-
-@section('menu-sider')
-@include('menu.sider')
-@stop
