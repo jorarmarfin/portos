@@ -106,6 +106,7 @@ return [
     */
 
     'attributes' => [
+        'name'=>'nombre',
         'password'=>'contraseña',
         'email'=>'correo electronico',
     ],
