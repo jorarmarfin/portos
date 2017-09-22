@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password', 60);
             $table->integer('idrole')->unsigned();
             $table->string('foto',50)->default('nofoto.jpg');
-            $table->boolean('activo')->nullable();
+            $table->boolean('activo')->default(true);
             $table->rememberToken();
             $table->timestamps();
             $table->foreign('idrole')->references('id')->on('catalogo');
