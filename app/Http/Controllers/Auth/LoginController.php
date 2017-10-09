@@ -32,7 +32,7 @@ class LoginController extends Controller
 
     public function username()
     {
-        return 'username';
+        return 'dni';
     }
 
     public function redirectTo()
@@ -56,7 +56,7 @@ class LoginController extends Controller
     protected function credentials(Request $request)
     {
         return [
-        'username' => $request->get('username'),
+        'dni' => $request->get('dni'),
         'password' => $request->get('password'),
         'activo' => true
         ];
