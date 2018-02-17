@@ -2,7 +2,7 @@
 
 
 @section('login')
-
+@include('layouts.alerts.errors')
 {!! Form::open(['route'=>'login','method'=>'POST','class'=>'m-login__form m-form']) !!}
         <div class="form-group m-form__group">
             {!! Form::text('username', '', ['placeholder'=>'username','class'=>'form-control m-input','autocomplete'=>'off']) !!}
@@ -14,7 +14,7 @@
         <div class="row m-login__form-sub">
             <div class="col m--align-left m-login__form-left">
                 <label class="m-checkbox  m-checkbox--light">
-                    <input type="checkbox" name="remember">
+                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
                     Recuerdame
                     <span></span>
                 </label>
