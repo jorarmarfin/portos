@@ -6,17 +6,14 @@
 	>
 	<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
 		<li class="m-menu__item  m-menu__item--active" aria-haspopup="true" >
-			<a  href="index.html" class="m-menu__link ">
+			<a  href="{{ route('admin.index') }}" class="m-menu__link ">
 				<i class="m-menu__link-icon flaticon-line-graph"></i>
 				<span class="m-menu__link-title">
 					<span class="m-menu__link-wrap">
 						<span class="m-menu__link-text">
-							Dashboard
+							Escritorio
 						</span>
 						<span class="m-menu__link-badge">
-							<span class="m-badge m-badge--danger">
-								2
-							</span>
 						</span>
 					</span>
 				</span>
@@ -32,7 +29,11 @@
 	@if (empty($item['submenu']))
 		<li id="menu_{{ $item['id'] }}" {!! Html::classes('m-menu__item  m-menu__item--submenu', $item['class']) !!} aria-haspopup="true"  data-menu-submenu-toggle="hover">
 			<a  href="{{ $item['url'] }}" class="m-menu__link m-menu__toggle">
-				<i class="m-menu__link-icon flaticon-layers"></i>
+				@if (isset($item['icon']))
+					<i class="m-menu__link-icon {{ $item['icon'] }}"></i>
+				@else
+					<i class="m-menu__link-icon flaticon-layers"></i>
+				@endif
 				<span class="m-menu__link-text">
 					{{ $item['title'] }}
 				</span>
@@ -41,7 +42,11 @@
 	@else
 		<li id="menu_{{ $item['id'] }}" {!! Html::classes('m-menu__item  m-menu__item--submenu', $item['class']) !!} aria-haspopup="true"  data-menu-submenu-toggle="hover">
 			<a  href="{{ $item['url'] }}" class="m-menu__link m-menu__toggle">
-				<i class="m-menu__link-icon flaticon-layers"></i>
+				@if (isset($item['icon']))
+					<i class="m-menu__link-icon {{ $item['icon'] }}"></i>
+				@else
+					<i class="m-menu__link-icon flaticon-layers"></i>
+				@endif
 				<span class="m-menu__link-text">
 					{{ $item['title'] }}
 				</span>

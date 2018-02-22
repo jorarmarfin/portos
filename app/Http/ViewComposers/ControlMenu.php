@@ -14,10 +14,9 @@ class ControlMenu
 	public function compose(View $view)
 	{
 		$items = [
-			'Inicio' => ['url' => '#', 'icon' => 'flaticon-share'],
-			'Configuracion' => [
+			'Configuracion' => [ 'icon'=>'flaticon-settings-1',
 						'submenu'=>[
-							'Catalogo'=>['url'=>'#','roles'=>['root']],
+							'Catalogo'=>['route'=>'admin.catalogo.index','roles'=>['root']],
 							'Secciones'=>['url'=>['#','secciones'],'roles'=>['root']],
 							'Roles'=>['url'=>['#','roles'],'roles'=>['root']],
 							'Usuarios'=>['url'=>'#','roles'=>['root']]
