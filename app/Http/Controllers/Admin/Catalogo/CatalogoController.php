@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Admin\Catalogo;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Catalogo;
+use Illuminate\Http\Request;
 
 class CatalogoController extends Controller
 {
-    $Titulo = 'Catalogo';
+    private $Titulo = 'Catalogo';
 
     /**
      * Display a listing of the resource.
@@ -16,7 +17,8 @@ class CatalogoController extends Controller
      */
     public function index()
     {
-        return view('admin.catalogo.index',compact('Titulo'));
+        $Lista = Catalogo::all();
+        return view('admin.catalogo.index',compact('Lista'));
     }
 
     /**

@@ -1090,19 +1090,9 @@
 				<!-- END: Left Aside -->
 				<div class="m-grid__item m-grid__item--fluid m-wrapper">
 					<!-- BEGIN: Subheader -->
-					<div class="m-subheader ">
-						<div class="d-flex align-items-center">
-							<div class="mr-auto">
-								<h3 class="m-subheader__title ">
-									Dashboard
-								</h3>
-							</div>
-							<div>
-							</div>
-						</div>
-					</div>
 					<!-- END: Subheader -->
 					<div class="m-content">
+					@yield('content')
 					</div>
 				</div>
 			</div>
@@ -1113,7 +1103,7 @@
 					<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
 						<div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
 							<span class="m-footer__copyright">
-								2017 &copy; Metronic theme by
+								2018 &copy; Metronic theme by
 								<a href="https://keenthemes.com" class="m-link">
 									Keenthemes
 								</a>
@@ -1133,6 +1123,7 @@
     	<!--begin::Base Scripts -->
 		<script src="{{asset('assets/vendors/base/vendors.bundle.js')}}" type="text/javascript"></script>
 		<script src="{{asset('assets/demo/default/base/scripts.bundle.js')}}" type="text/javascript"></script>
+		<script src="{{asset('src/js/framework/components/general/datatable/datatable.js')}}" type="text/javascript"></script>
 		<!--end::Base Scripts -->
         <!--begin::Page Vendors -->
 		<script src="{{asset('assets/vendors/custom/fullcalendar/fullcalendar.bundle.js')}}" type="text/javascript"></script>
@@ -1140,6 +1131,7 @@
         <!--begin::Page Snippets -->
 		<script src="{{asset('assets/app/js/dashboard.js')}}" type="text/javascript"></script>
 		<!--end::Page Snippets -->
+		@yield('js-scripts')
 	</body>
 	<!-- end::Body -->
 </html>
