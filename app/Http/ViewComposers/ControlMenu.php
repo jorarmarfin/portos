@@ -24,6 +24,9 @@ class ControlMenu
 			],
 			'contact-us' => ['full_url' => 'http://contact.us','roles'=>['admin','root']]
 		];
-		$view->with(compact('items'));
+		$profile = [
+			'Mi perfil' => ['url'=>'#'],
+		];
+		$view->with(compact('items','profile'));
 	}
 }
