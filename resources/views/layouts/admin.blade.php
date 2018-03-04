@@ -1,1072 +1,1085 @@
-<!DOCTYPE html>
-<html lang="es" >
-	<!-- begin::Head -->
+<!doctype html>
+<html class="fixed">
 	<head>
-		<meta charset="utf-8" />
-		<title>
-			Metronic | Dashboard
-		</title>
-		<meta name="description" content="Latest updates and statistic charts">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!--begin::Web font -->
-		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-		<script>
-          WebFont.load({
-            google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
-            active: function() {
-                sessionStorage.fonts = true;
-            }
-          });
-		</script>
-		<!--end::Web font -->
-        <!--begin::Base Styles -->
-        <!--begin::Page Vendors -->
-		<link href="{{asset('assets/vendors/custom/fullcalendar/fullcalendar.bundle.css')}}" rel="stylesheet" type="text/css" />
-		<!--end::Page Vendors -->
-		<link href="{{asset('assets/vendors/base/vendors.bundle.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('assets/demo/default/base/style.bundle.css')}}" rel="stylesheet" type="text/css" />
-		<!--end::Base Styles -->
-		<link rel="shortcut icon" href="{{asset('assets/demo/default/media/img/logo/favicon.ico')}}" />
+
+		<!-- Basic -->
+		<meta charset="UTF-8">
+
+		<title>Blank Page | Porto Admin - Responsive HTML5 Template 2.0.0</title>
+		<meta name="keywords" content="HTML5 Admin Template" />
+		<meta name="description" content="Porto Admin - Responsive HTML5 Template">
+		<meta name="author" content="okler.net">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.css') }}" />
+		<link rel="stylesheet" href="vendor/animate/animate.css">
+
+		<link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/font-awesome.css') }}" />
+		<link rel="stylesheet" href="{{asset('vendor/magnific-popup/magnific-popup.css')}}" />
+		<link rel="stylesheet" href="{{ asset('vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css') }}" />
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="{{ asset('css/theme.css') }}" />
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="{{ asset('css/skins/default.css') }}" />
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+
+		<!-- Head Libs -->
+		<script src="{{ asset('vendor/modernizr/modernizr.js') }}"></script>
+
 	</head>
-	<!-- end::Head -->
-    <!-- end::Body -->
-	<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default m-brand--minimize m-aside-left--minimize"  >
-		<!-- begin:: Page -->
-		<div class="m-grid m-grid--hor m-grid--root m-page">
-			<!-- BEGIN: Header -->
-			<header class="m-grid__item    m-header "  data-minimize-offset="200" data-minimize-mobile-offset="200" >
-				<div class="m-container m-container--fluid m-container--full-height">
-					<div class="m-stack m-stack--ver m-stack--desktop">
-						<!-- BEGIN: Brand -->
-						<div class="m-stack__item m-brand  m-brand--skin-dark ">
-							<div class="m-stack m-stack--ver m-stack--general">
-								<div class="m-stack__item m-stack__item--middle m-brand__logo">
-									<a href="index.html" class="m-brand__logo-wrapper">
-										<img alt="" src="assets/demo/default/media/img/logo/logo_default_dark.png"/>
-									</a>
-								</div>
-								<div class="m-stack__item m-stack__item--middle m-brand__tools">
-									<!-- BEGIN: Left Aside Minimize Toggle -->
-									<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block
-					 ">
-										<span></span>
-									</a>
-									<!-- END -->
-							<!-- BEGIN: Responsive Aside Left Menu Toggler -->
-									<a href="javascript:;" id="m_aside_left_offcanvas_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-tablet-and-mobile-inline-block">
-										<span></span>
-									</a>
-									<!-- END -->
-							<!-- BEGIN: Responsive Header Menu Toggler -->
-									<a id="m_aside_header_menu_mobile_toggle" href="javascript:;" class="m-brand__icon m-brand__toggler m--visible-tablet-and-mobile-inline-block">
-										<span></span>
-									</a>
-									<!-- END -->
-									<!-- BEGIN: Topbar Toggler -->
-									<a id="m_aside_header_topbar_mobile_toggle" href="javascript:;" class="m-brand__icon m--visible-tablet-and-mobile-inline-block">
-										<i class="flaticon-more"></i>
-									</a>
-									<!-- BEGIN: Topbar Toggler -->
-								</div>
-							</div>
+	<body>
+		<section class="body">
+
+			<!-- start: header -->
+			<header class="header">
+				<div class="logo-container">
+					<a href="../2.0.0" class="logo">
+						<img src="img/logo.png" width="75" height="35" alt="Porto Admin" />
+					</a>
+					<div class="d-md-none toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+				</div>
+
+				<!-- start: search & user box -->
+				<div class="header-right">
+
+					<form action="pages-search-results.html" class="search nav-form">
+						<div class="input-group input-search">
+							<input type="text" class="form-control" name="q" id="q" placeholder="Search...">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+							</span>
 						</div>
-						<!-- END: Brand -->
-						<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
-							<!-- BEGIN: Horizontal Menu -->
-							<button class="m-aside-header-menu-mobile-close  m-aside-header-menu-mobile-close--skin-dark " id="m_aside_header_menu_mobile_close_btn">
-								<i class="la la-close"></i>
-							</button>
-							<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark "  >
-								<ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
-									<li class="m-menu__item  m-menu__item--submenu m-menu__item--rel"  data-menu-submenu-toggle="click" data-redirect="true" aria-haspopup="true">
-										<a  href="#" class="m-menu__link m-menu__toggle">
-											<i class="m-menu__link-icon flaticon-add"></i>
-											<span class="m-menu__link-text">
-												Actions
-											</span>
-											<i class="m-menu__hor-arrow la la-angle-down"></i>
-											<i class="m-menu__ver-arrow la la-angle-right"></i>
-										</a>
-										<div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left">
-											<span class="m-menu__arrow m-menu__arrow--adjust"></span>
-											<ul class="m-menu__subnav">
-												<li class="m-menu__item "  aria-haspopup="true">
-													<a  href="header/actions.html" class="m-menu__link ">
-														<i class="m-menu__link-icon flaticon-file"></i>
-														<span class="m-menu__link-text">
-															Create New Post
-														</span>
-													</a>
-												</li>
-												<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-													<a  href="header/actions.html" class="m-menu__link ">
-														<i class="m-menu__link-icon flaticon-diagram"></i>
-														<span class="m-menu__link-title">
-															<span class="m-menu__link-wrap">
-																<span class="m-menu__link-text">
-																	Generate Reports
-																</span>
-																<span class="m-menu__link-badge">
-																	<span class="m-badge m-badge--success">
-																		2
-																	</span>
-																</span>
-															</span>
-														</span>
-													</a>
-												</li>
-												<li class="m-menu__item  m-menu__item--submenu"  data-menu-submenu-toggle="hover" data-redirect="true" aria-haspopup="true">
-													<a  href="#" class="m-menu__link m-menu__toggle">
-														<i class="m-menu__link-icon flaticon-business"></i>
-														<span class="m-menu__link-text">
-															Manage Orders
-														</span>
-														<i class="m-menu__hor-arrow la la-angle-right"></i>
-														<i class="m-menu__ver-arrow la la-angle-right"></i>
-													</a>
-													<div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--right">
-														<span class="m-menu__arrow "></span>
-														<ul class="m-menu__subnav">
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Latest Orders
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Pending Orders
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Processed Orders
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Delivery Reports
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Payments
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Customers
-																	</span>
-																</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="m-menu__item  m-menu__item--submenu"  data-menu-submenu-toggle="hover" data-redirect="true" aria-haspopup="true">
-													<a  href="#" class="m-menu__link m-menu__toggle">
-														<i class="m-menu__link-icon flaticon-chat-1"></i>
-														<span class="m-menu__link-text">
-															Customer Feedbacks
-														</span>
-														<i class="m-menu__hor-arrow la la-angle-right"></i>
-														<i class="m-menu__ver-arrow la la-angle-right"></i>
-													</a>
-													<div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--right">
-														<span class="m-menu__arrow "></span>
-														<ul class="m-menu__subnav">
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Customer Feedbacks
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Supplier Feedbacks
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Reviewed Feedbacks
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Resolved Feedbacks
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Feedback Reports
-																	</span>
-																</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-													<a  href="header/actions.html" class="m-menu__link ">
-														<i class="m-menu__link-icon flaticon-users"></i>
-														<span class="m-menu__link-text">
-															Register Member
-														</span>
-													</a>
-												</li>
-											</ul>
-										</div>
-									</li>
-									<li class="m-menu__item  m-menu__item--submenu m-menu__item--rel"  data-menu-submenu-toggle="click" data-redirect="true" aria-haspopup="true">
-										<a  href="#" class="m-menu__link m-menu__toggle">
-											<i class="m-menu__link-icon flaticon-line-graph"></i>
-											<span class="m-menu__link-text">
-												Reports
-											</span>
-											<i class="m-menu__hor-arrow la la-angle-down"></i>
-											<i class="m-menu__ver-arrow la la-angle-right"></i>
-										</a>
-										<div class="m-menu__submenu  m-menu__submenu--fixed m-menu__submenu--left" style="width:1000px">
-											<span class="m-menu__arrow m-menu__arrow--adjust"></span>
-											<div class="m-menu__subnav">
-												<ul class="m-menu__content">
-													<li class="m-menu__item">
-														<h3 class="m-menu__heading m-menu__toggle">
-															<span class="m-menu__link-text">
-																Finance Reports
-															</span>
-															<i class="m-menu__ver-arrow la la-angle-right"></i>
-														</h3>
-														<ul class="m-menu__inner">
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-icon flaticon-map"></i>
-																	<span class="m-menu__link-text">
-																		Annual Reports
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-icon flaticon-user"></i>
-																	<span class="m-menu__link-text">
-																		HR Reports
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-icon flaticon-clipboard"></i>
-																	<span class="m-menu__link-text">
-																		IPO Reports
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-icon flaticon-graphic-1"></i>
-																	<span class="m-menu__link-text">
-																		Finance Margins
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-icon flaticon-graphic-2"></i>
-																	<span class="m-menu__link-text">
-																		Revenue Reports
-																	</span>
-																</a>
-															</li>
-														</ul>
-													</li>
-													<li class="m-menu__item">
-														<h3 class="m-menu__heading m-menu__toggle">
-															<span class="m-menu__link-text">
-																Project Reports
-															</span>
-															<i class="m-menu__ver-arrow la la-angle-right"></i>
-														</h3>
-														<ul class="m-menu__inner">
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-bullet m-menu__link-bullet--line">
-																		<span></span>
-																	</i>
-																	<span class="m-menu__link-text">
-																		Coca Cola CRM
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-bullet m-menu__link-bullet--line">
-																		<span></span>
-																	</i>
-																	<span class="m-menu__link-text">
-																		Delta Airlines Booking Site
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-bullet m-menu__link-bullet--line">
-																		<span></span>
-																	</i>
-																	<span class="m-menu__link-text">
-																		Malibu Accounting
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-bullet m-menu__link-bullet--line">
-																		<span></span>
-																	</i>
-																	<span class="m-menu__link-text">
-																		Vineseed Website Rewamp
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-bullet m-menu__link-bullet--line">
-																		<span></span>
-																	</i>
-																	<span class="m-menu__link-text">
-																		Zircon Mobile App
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-bullet m-menu__link-bullet--line">
-																		<span></span>
-																	</i>
-																	<span class="m-menu__link-text">
-																		Mercury CMS
-																	</span>
-																</a>
-															</li>
-														</ul>
-													</li>
-													<li class="m-menu__item">
-														<h3 class="m-menu__heading m-menu__toggle">
-															<span class="m-menu__link-text">
-																HR Reports
-															</span>
-															<i class="m-menu__ver-arrow la la-angle-right"></i>
-														</h3>
-														<ul class="m-menu__inner">
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-																		<span></span>
-																	</i>
-																	<span class="m-menu__link-text">
-																		Staff Directory
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-																		<span></span>
-																	</i>
-																	<span class="m-menu__link-text">
-																		Client Directory
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-																		<span></span>
-																	</i>
-																	<span class="m-menu__link-text">
-																		Salary Reports
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-																		<span></span>
-																	</i>
-																	<span class="m-menu__link-text">
-																		Staff Payslips
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-																		<span></span>
-																	</i>
-																	<span class="m-menu__link-text">
-																		Corporate Expenses
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-																		<span></span>
-																	</i>
-																	<span class="m-menu__link-text">
-																		Project Expenses
-																	</span>
-																</a>
-															</li>
-														</ul>
-													</li>
-													<li class="m-menu__item">
-														<h3 class="m-menu__heading m-menu__toggle">
-															<span class="m-menu__link-text">
-																Reporting Apps
-															</span>
-															<i class="m-menu__ver-arrow la la-angle-right"></i>
-														</h3>
-														<ul class="m-menu__inner">
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Report Adjusments
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Sources & Mediums
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Reporting Settings
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Conversions
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Report Flows
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Audit & Logs
-																	</span>
-																</a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</li>
-									<li class="m-menu__item  m-menu__item--submenu m-menu__item--rel"  data-menu-submenu-toggle="click" data-redirect="true" aria-haspopup="true">
-										<a  href="#" class="m-menu__link m-menu__toggle">
-											<i class="m-menu__link-icon flaticon-paper-plane"></i>
-											<span class="m-menu__link-title">
-												<span class="m-menu__link-wrap">
-													<span class="m-menu__link-text">
-														Apps
-													</span>
-													<span class="m-menu__link-badge">
-														<span class="m-badge m-badge--brand m-badge--wide">
-															new
-														</span>
-													</span>
-												</span>
-											</span>
-											<i class="m-menu__hor-arrow la la-angle-down"></i>
-											<i class="m-menu__ver-arrow la la-angle-right"></i>
-										</a>
-										<div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left">
-											<span class="m-menu__arrow m-menu__arrow--adjust"></span>
-											<ul class="m-menu__subnav">
-												<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-													<a  href="header/actions.html" class="m-menu__link ">
-														<i class="m-menu__link-icon flaticon-business"></i>
-														<span class="m-menu__link-text">
-															eCommerce
-														</span>
-													</a>
-												</li>
-												<li class="m-menu__item  m-menu__item--submenu"  data-menu-submenu-toggle="hover" data-redirect="true" aria-haspopup="true">
-													<a  href="crud/datatable_v1.html" class="m-menu__link m-menu__toggle">
-														<i class="m-menu__link-icon flaticon-computer"></i>
-														<span class="m-menu__link-text">
-															Audience
-														</span>
-														<i class="m-menu__hor-arrow la la-angle-right"></i>
-														<i class="m-menu__ver-arrow la la-angle-right"></i>
-													</a>
-													<div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--right">
-														<span class="m-menu__arrow "></span>
-														<ul class="m-menu__subnav">
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-icon flaticon-users"></i>
-																	<span class="m-menu__link-text">
-																		Active Users
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-icon flaticon-interface-1"></i>
-																	<span class="m-menu__link-text">
-																		User Explorer
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-icon flaticon-lifebuoy"></i>
-																	<span class="m-menu__link-text">
-																		Users Flows
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-icon flaticon-graphic-1"></i>
-																	<span class="m-menu__link-text">
-																		Market Segments
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-icon flaticon-graphic"></i>
-																	<span class="m-menu__link-text">
-																		User Reports
-																	</span>
-																</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-													<a  href="header/actions.html" class="m-menu__link ">
-														<i class="m-menu__link-icon flaticon-map"></i>
-														<span class="m-menu__link-text">
-															Marketing
-														</span>
-													</a>
-												</li>
-												<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-													<a  href="header/actions.html" class="m-menu__link ">
-														<i class="m-menu__link-icon flaticon-graphic-2"></i>
-														<span class="m-menu__link-title">
-															<span class="m-menu__link-wrap">
-																<span class="m-menu__link-text">
-																	Campaigns
-																</span>
-																<span class="m-menu__link-badge">
-																	<span class="m-badge m-badge--success">
-																		3
-																	</span>
-																</span>
-															</span>
-														</span>
-													</a>
-												</li>
-												<li class="m-menu__item  m-menu__item--submenu"  data-menu-submenu-toggle="hover" data-redirect="true" aria-haspopup="true">
-													<a  href="#" class="m-menu__link m-menu__toggle">
-														<i class="m-menu__link-icon flaticon-infinity"></i>
-														<span class="m-menu__link-text">
-															Cloud Manager
-														</span>
-														<i class="m-menu__hor-arrow la la-angle-right"></i>
-														<i class="m-menu__ver-arrow la la-angle-right"></i>
-													</a>
-													<div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left">
-														<span class="m-menu__arrow "></span>
-														<ul class="m-menu__subnav">
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-icon flaticon-add"></i>
-																	<span class="m-menu__link-title">
-																		<span class="m-menu__link-wrap">
-																			<span class="m-menu__link-text">
-																				File Upload
-																			</span>
-																			<span class="m-menu__link-badge">
-																				<span class="m-badge m-badge--danger">
-																					3
-																				</span>
-																			</span>
-																		</span>
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-icon flaticon-signs-1"></i>
-																	<span class="m-menu__link-text">
-																		File Attributes
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-icon flaticon-folder"></i>
-																	<span class="m-menu__link-text">
-																		Folders
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<i class="m-menu__link-icon flaticon-cogwheel-2"></i>
-																	<span class="m-menu__link-text">
-																		System Settings
-																	</span>
-																</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-											</ul>
-										</div>
-									</li>
-								</ul>
-							</div>
-							<!-- END: Horizontal Menu -->
-							<!-- BEGIN: Topbar -->
-							<div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
-								<div class="m-stack__item m-topbar__nav-wrapper">
-									<ul class="m-topbar__nav m-nav m-nav--inline">
-										<li class="
-				m-nav__item m-dropdown m-dropdown--large m-dropdown--arrow m-dropdown--align-center m-dropdown--mobile-full-width m-dropdown--skin-light	m-list-search m-list-search--skin-light"
-				data-dropdown-toggle="click" data-dropdown-persistent="true" id="m_quicksearch" data-search-type="dropdown">
-											<a href="#" class="m-nav__link m-dropdown__toggle">
-												<span class="m-nav__link-icon">
-													<i class="flaticon-search-1"></i>
-												</span>
-											</a>
-											<div class="m-dropdown__wrapper">
-												<span class="m-dropdown__arrow m-dropdown__arrow--center"></span>
-												<div class="m-dropdown__inner ">
-													<div class="m-dropdown__header">
-														<form  class="m-list-search__form">
-															<div class="m-list-search__form-wrapper">
-																<span class="m-list-search__form-input-wrapper">
-																	<input id="m_quicksearch_input" autocomplete="off" type="text" name="q" class="m-list-search__form-input" value="" placeholder="Search...">
-																</span>
-																<span class="m-list-search__form-icon-close" id="m_quicksearch_close">
-																	<i class="la la-remove"></i>
-																</span>
-															</div>
-														</form>
-													</div>
-													<div class="m-dropdown__body">
-														<div class="m-dropdown__scrollable m-scrollable" data-max-height="300" data-mobile-max-height="200">
-															<div class="m-dropdown__content"></div>
-														</div>
-													</div>
-												</div>
+					</form>
+
+					<span class="separator"></span>
+
+					<ul class="notifications">
+						<li>
+							<a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+								<i class="fa fa-tasks"></i>
+								<span class="badge">3</span>
+							</a>
+
+							<div class="dropdown-menu notification-menu large">
+								<div class="notification-title">
+									<span class="float-right badge badge-default">3</span>
+									Tasks
+								</div>
+
+								<div class="content">
+									<ul>
+										<li>
+											<p class="clearfix mb-1">
+												<span class="message float-left">Generating Sales Report</span>
+												<span class="message float-right text-dark">60%</span>
+											</p>
+											<div class="progress progress-xs light">
+												<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
 											</div>
 										</li>
-										<li class="m-nav__item m-topbar__notifications m-topbar__notifications--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-center 	m-dropdown--mobile-full-width" data-dropdown-toggle="click" data-dropdown-persistent="true">
-											<a href="#" class="m-nav__link m-dropdown__toggle" id="m_topbar_notification_icon">
-												<span class="m-nav__link-badge m-badge m-badge--dot m-badge--dot-small m-badge--danger"></span>
-												<span class="m-nav__link-icon">
-													<i class="flaticon-music-2"></i>
-												</span>
-											</a>
-											<div class="m-dropdown__wrapper">
-												<span class="m-dropdown__arrow m-dropdown__arrow--center"></span>
-												<div class="m-dropdown__inner">
-													<div class="m-dropdown__header m--align-center" style="background: url(assets/app/media/img/misc/notification_bg.jpg); background-size: cover;">
-														<span class="m-dropdown__header-title">
-															9 New
-														</span>
-														<span class="m-dropdown__header-subtitle">
-															User Notifications
-														</span>
-													</div>
-													<div class="m-dropdown__body">
-														<div class="m-dropdown__content">
-															<ul class="nav nav-tabs m-tabs m-tabs-line m-tabs-line--brand" role="tablist">
-																<li class="nav-item m-tabs__item">
-																	<a class="nav-link m-tabs__link active" data-toggle="tab" href="#topbar_notifications_notifications" role="tab">
-																		Alerts
-																	</a>
-																</li>
-																<li class="nav-item m-tabs__item">
-																	<a class="nav-link m-tabs__link" data-toggle="tab" href="#topbar_notifications_events" role="tab">
-																		Events
-																	</a>
-																</li>
-																<li class="nav-item m-tabs__item">
-																	<a class="nav-link m-tabs__link" data-toggle="tab" href="#topbar_notifications_logs" role="tab">
-																		Logs
-																	</a>
-																</li>
-															</ul>
-															<div class="tab-content">
-																<div class="tab-pane active" id="topbar_notifications_notifications" role="tabpanel">
-																	<div class="m-scrollable" data-scrollable="true" data-max-height="250" data-mobile-max-height="200">
-																		<div class="m-list-timeline m-list-timeline--skin-light">
-																			<div class="m-list-timeline__items">
-																				<div class="m-list-timeline__item">
-																					<span class="m-list-timeline__badge -m-list-timeline__badge--state-success"></span>
-																					<span class="m-list-timeline__text">
-																						12 new users registered
-																					</span>
-																					<span class="m-list-timeline__time">
-																						Just now
-																					</span>
-																				</div>
-																				<div class="m-list-timeline__item">
-																					<span class="m-list-timeline__badge"></span>
-																					<span class="m-list-timeline__text">
-																						System shutdown
-																						<span class="m-badge m-badge--success m-badge--wide">
-																							pending
-																						</span>
-																					</span>
-																					<span class="m-list-timeline__time">
-																						14 mins
-																					</span>
-																				</div>
-																				<div class="m-list-timeline__item">
-																					<span class="m-list-timeline__badge"></span>
-																					<span class="m-list-timeline__text">
-																						New invoice received
-																					</span>
-																					<span class="m-list-timeline__time">
-																						20 mins
-																					</span>
-																				</div>
-																				<div class="m-list-timeline__item">
-																					<span class="m-list-timeline__badge"></span>
-																					<span class="m-list-timeline__text">
-																						DB overloaded 80%
-																						<span class="m-badge m-badge--info m-badge--wide">
-																							settled
-																						</span>
-																					</span>
-																					<span class="m-list-timeline__time">
-																						1 hr
-																					</span>
-																				</div>
-																				<div class="m-list-timeline__item">
-																					<span class="m-list-timeline__badge"></span>
-																					<span class="m-list-timeline__text">
-																						System error -
-																						<a href="#" class="m-link">
-																							Check
-																						</a>
-																					</span>
-																					<span class="m-list-timeline__time">
-																						2 hrs
-																					</span>
-																				</div>
-																				<div class="m-list-timeline__item m-list-timeline__item--read">
-																					<span class="m-list-timeline__badge"></span>
-																					<span href="" class="m-list-timeline__text">
-																						New order received
-																						<span class="m-badge m-badge--danger m-badge--wide">
-																							urgent
-																						</span>
-																					</span>
-																					<span class="m-list-timeline__time">
-																						7 hrs
-																					</span>
-																				</div>
-																				<div class="m-list-timeline__item m-list-timeline__item--read">
-																					<span class="m-list-timeline__badge"></span>
-																					<span class="m-list-timeline__text">
-																						Production server down
-																					</span>
-																					<span class="m-list-timeline__time">
-																						3 hrs
-																					</span>
-																				</div>
-																				<div class="m-list-timeline__item">
-																					<span class="m-list-timeline__badge"></span>
-																					<span class="m-list-timeline__text">
-																						Production server up
-																					</span>
-																					<span class="m-list-timeline__time">
-																						5 hrs
-																					</span>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="tab-pane" id="topbar_notifications_events" role="tabpanel">
-																	<div class="m-scrollable" data-max-height="250" data-mobile-max-height="200">
-																		<div class="m-list-timeline m-list-timeline--skin-light">
-																			<div class="m-list-timeline__items">
-																				<div class="m-list-timeline__item">
-																					<span class="m-list-timeline__badge m-list-timeline__badge--state1-success"></span>
-																					<a href="" class="m-list-timeline__text">
-																						New order received
-																					</a>
-																					<span class="m-list-timeline__time">
-																						Just now
-																					</span>
-																				</div>
-																				<div class="m-list-timeline__item">
-																					<span class="m-list-timeline__badge m-list-timeline__badge--state1-danger"></span>
-																					<a href="" class="m-list-timeline__text">
-																						New invoice received
-																					</a>
-																					<span class="m-list-timeline__time">
-																						20 mins
-																					</span>
-																				</div>
-																				<div class="m-list-timeline__item">
-																					<span class="m-list-timeline__badge m-list-timeline__badge--state1-success"></span>
-																					<a href="" class="m-list-timeline__text">
-																						Production server up
-																					</a>
-																					<span class="m-list-timeline__time">
-																						5 hrs
-																					</span>
-																				</div>
-																				<div class="m-list-timeline__item">
-																					<span class="m-list-timeline__badge m-list-timeline__badge--state1-info"></span>
-																					<a href="" class="m-list-timeline__text">
-																						New order received
-																					</a>
-																					<span class="m-list-timeline__time">
-																						7 hrs
-																					</span>
-																				</div>
-																				<div class="m-list-timeline__item">
-																					<span class="m-list-timeline__badge m-list-timeline__badge--state1-info"></span>
-																					<a href="" class="m-list-timeline__text">
-																						System shutdown
-																					</a>
-																					<span class="m-list-timeline__time">
-																						11 mins
-																					</span>
-																				</div>
-																				<div class="m-list-timeline__item">
-																					<span class="m-list-timeline__badge m-list-timeline__badge--state1-info"></span>
-																					<a href="" class="m-list-timeline__text">
-																						Production server down
-																					</a>
-																					<span class="m-list-timeline__time">
-																						3 hrs
-																					</span>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="tab-pane" id="topbar_notifications_logs" role="tabpanel">
-																	<div class="m-stack m-stack--ver m-stack--general" style="min-height: 180px;">
-																		<div class="m-stack__item m-stack__item--center m-stack__item--middle">
-																			<span class="">
-																				All caught up!
-																				<br>
-																				No new logs.
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
+
+										<li>
+											<p class="clearfix mb-1">
+												<span class="message float-left">Importing Contacts</span>
+												<span class="message float-right text-dark">98%</span>
+											</p>
+											<div class="progress progress-xs light">
+												<div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" style="width: 98%;"></div>
 											</div>
 										</li>
-										<li class="m-nav__item m-topbar__quick-actions m-topbar__quick-actions--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push m-dropdown--mobile-full-width m-dropdown--skin-light"  data-dropdown-toggle="click">
-											<a href="#" class="m-nav__link m-dropdown__toggle">
-												<span class="m-nav__link-badge m-badge m-badge--dot m-badge--info m--hide"></span>
-												<span class="m-nav__link-icon">
-													<i class="flaticon-share"></i>
-												</span>
-											</a>
-											<div class="m-dropdown__wrapper">
-												<span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
-												<div class="m-dropdown__inner">
-													<div class="m-dropdown__header m--align-center" style="background: url(assets/app/media/img/misc/quick_actions_bg.jpg); background-size: cover;">
-														<span class="m-dropdown__header-title">
-															Quick Actions
-														</span>
-														<span class="m-dropdown__header-subtitle">
-															Shortcuts
-														</span>
-													</div>
-													<div class="m-dropdown__body m-dropdown__body--paddingless">
-														<div class="m-dropdown__content">
-															<div class="m-scrollable" data-scrollable="false" data-max-height="380" data-mobile-max-height="200">
-																<div class="m-nav-grid m-nav-grid--skin-light">
-																	<div class="m-nav-grid__row">
-																		<a href="#" class="m-nav-grid__item">
-																			<i class="m-nav-grid__icon flaticon-file"></i>
-																			<span class="m-nav-grid__text">
-																				Generate Report
-																			</span>
-																		</a>
-																		<a href="#" class="m-nav-grid__item">
-																			<i class="m-nav-grid__icon flaticon-time"></i>
-																			<span class="m-nav-grid__text">
-																				Add New Event
-																			</span>
-																		</a>
-																	</div>
-																	<div class="m-nav-grid__row">
-																		<a href="#" class="m-nav-grid__item">
-																			<i class="m-nav-grid__icon flaticon-folder"></i>
-																			<span class="m-nav-grid__text">
-																				Create New Task
-																			</span>
-																		</a>
-																		<a href="#" class="m-nav-grid__item">
-																			<i class="m-nav-grid__icon flaticon-clipboard"></i>
-																			<span class="m-nav-grid__text">
-																				Completed Tasks
-																			</span>
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" data-dropdown-toggle="click">
-											<a href="#" class="m-nav__link m-dropdown__toggle">
-												<span class="m-topbar__userpic">
-													<img src="assets/app/media/img/users/user4.jpg" class="m--img-rounded m--marginless m--img-centered" alt=""/>
-												</span>
-												<span class="m-topbar__username m--hide">
-													Nick
-												</span>
-											</a>
-											<div class="m-dropdown__wrapper">
-												<span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
-												<div class="m-dropdown__inner">
-													<div class="m-dropdown__header m--align-center" style="background: url(assets/app/media/img/misc/user_profile_bg.jpg); background-size: cover;">
-														<div class="m-card-user m-card-user--skin-dark">
-															<div class="m-card-user__pic">
-																<img src="assets/app/media/img/users/user4.jpg" class="m--img-rounded m--marginless" alt=""/>
-															</div>
-															<div class="m-card-user__details">
-																<span class="m-card-user__name m--font-weight-500">
-																	Mark Andre
-																</span>
-																<a href="" class="m-card-user__email m--font-weight-300 m-link">
-																	mark.andre@gmail.com
-																</a>
-															</div>
-														</div>
-													</div>
-													<div class="m-dropdown__body">
-														<div class="m-dropdown__content">
-														<!-- BEGIN: Profile Menu -->
-														{!! Menu::make($profile,'m-nav m-nav--skin-light')->render('layouts.menu.profile') !!}
-														<!-- END: Profile Menu -->
-														</div>
-													</div>
-												</div>
+
+										<li>
+											<p class="clearfix mb-1">
+												<span class="message float-left">Uploading something big</span>
+												<span class="message float-right text-dark">33%</span>
+											</p>
+											<div class="progress progress-xs light mb-1">
+												<div class="progress-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"></div>
 											</div>
 										</li>
 									</ul>
 								</div>
 							</div>
-							<!-- END: Topbar -->
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+								<i class="fa fa-envelope"></i>
+								<span class="badge">4</span>
+							</a>
+
+							<div class="dropdown-menu notification-menu">
+								<div class="notification-title">
+									<span class="float-right badge badge-default">230</span>
+									Messages
+								</div>
+
+								<div class="content">
+									<ul>
+										<li>
+											<a href="#" class="clearfix">
+												<figure class="image">
+													<img src="img/!sample-user.jpg" alt="Joseph Doe Junior" class="rounded-circle" />
+												</figure>
+												<span class="title">Joseph Doe</span>
+												<span class="message">Lorem ipsum dolor sit.</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<figure class="image">
+													<img src="img/!sample-user.jpg" alt="Joseph Junior" class="rounded-circle" />
+												</figure>
+												<span class="title">Joseph Junior</span>
+												<span class="message truncate">Truncated message. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam, nec venenatis risus. Vestibulum blandit faucibus est et malesuada. Sed interdum cursus dui nec venenatis. Pellentesque non nisi lobortis, rutrum eros ut, convallis nisi. Sed tellus turpis, dignissim sit amet tristique quis, pretium id est. Sed aliquam diam diam, sit amet faucibus tellus ultricies eu. Aliquam lacinia nibh a metus bibendum, eu commodo eros commodo. Sed commodo molestie elit, a molestie lacus porttitor id. Donec facilisis varius sapien, ac fringilla velit porttitor et. Nam tincidunt gravida dui, sed pharetra odio pharetra nec. Duis consectetur venenatis pharetra. Vestibulum egestas nisi quis elementum elementum.</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<figure class="image">
+													<img src="img/!sample-user.jpg" alt="Joe Junior" class="rounded-circle" />
+												</figure>
+												<span class="title">Joe Junior</span>
+												<span class="message">Lorem ipsum dolor sit.</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<figure class="image">
+													<img src="img/!sample-user.jpg" alt="Joseph Junior" class="rounded-circle" />
+												</figure>
+												<span class="title">Joseph Junior</span>
+												<span class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam.</span>
+											</a>
+										</li>
+									</ul>
+
+									<hr />
+
+									<div class="text-right">
+										<a href="#" class="view-more">View All</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+								<i class="fa fa-bell"></i>
+								<span class="badge">3</span>
+							</a>
+
+							<div class="dropdown-menu notification-menu">
+								<div class="notification-title">
+									<span class="float-right badge badge-default">3</span>
+									Alerts
+								</div>
+
+								<div class="content">
+									<ul>
+										<li>
+											<a href="#" class="clearfix">
+												<div class="image">
+													<i class="fa fa-thumbs-down bg-danger text-light"></i>
+												</div>
+												<span class="title">Server is Down!</span>
+												<span class="message">Just now</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<div class="image">
+													<i class="fa fa-lock bg-warning text-light"></i>
+												</div>
+												<span class="title">User Locked</span>
+												<span class="message">15 minutes ago</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<div class="image">
+													<i class="fa fa-signal bg-success text-light"></i>
+												</div>
+												<span class="title">Connection Restaured</span>
+												<span class="message">10/10/2017</span>
+											</a>
+										</li>
+									</ul>
+
+									<hr />
+
+									<div class="text-right">
+										<a href="#" class="view-more">View All</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<span class="separator"></span>
+
+					<div id="userbox" class="userbox">
+						<a href="#" data-toggle="dropdown">
+							<figure class="profile-picture">
+								<img src="img/!logged-user.jpg" alt="Joseph Doe" class="rounded-circle" data-lock-picture="img/!logged-user.jpg" />
+							</figure>
+							<div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
+								<span class="name">John Doe Junior</span>
+								<span class="role">administrator</span>
+							</div>
+
+							<i class="fa custom-caret"></i>
+						</a>
+
+						<div class="dropdown-menu">
+							<ul class="list-unstyled mb-2">
+								<li class="divider"></li>
+								<li>
+									<a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i class="fa fa-user"></i> My Profile</a>
+								</li>
+								<li>
+									<a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="fa fa-lock"></i> Lock Screen</a>
+								</li>
+								<li>
+									<a role="menuitem" tabindex="-1" href="pages-signin.html"><i class="fa fa-power-off"></i> Logout</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
+				<!-- end: search & user box -->
 			</header>
-			<!-- END: Header -->
-		<!-- begin::Body -->
-			<div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
-				<!-- BEGIN: Left Aside -->
-				<button class="m-aside-left-close  m-aside-left-close--skin-dark " id="m_aside_left_close_btn">
-					<i class="la la-close"></i>
-				</button>
-				<div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark ">
-					<!-- BEGIN: Aside Menu -->
-					{!! Menu::make($items,'m-menu__nav  m-menu__nav--dropdown-submenu-arrow')->render('layouts.menu.side-right') !!}
-					<!-- END: Aside Menu -->
-				</div>
-				<!-- END: Left Aside -->
-				<div class="m-grid__item m-grid__item--fluid m-wrapper">
-					<!-- BEGIN: Subheader -->
-					<!-- END: Subheader -->
-					<div class="m-content">
-					@yield('content')
-					</div>
-				</div>
+			<!-- end: header -->
+
+			<div class="inner-wrapper">
+				<!-- start: sidebar -->
+				<aside id="sidebar-left" class="sidebar-left">
+
+				    <div class="sidebar-header">
+				        <div class="sidebar-title">
+				            Navigation
+				        </div>
+				        <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+				            <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+				        </div>
+				    </div>
+
+				    <div class="nano">
+				        <div class="nano-content">
+				            <nav id="menu" class="nav-main" role="navigation">
+
+				                <ul class="nav nav-main">
+				                    <li>
+				                        <a class="nav-link" href="layouts-default.html">
+				                            <i class="fa fa-home" aria-hidden="true"></i>
+				                            <span>Dashboard</span>
+				                        </a>
+				                    </li>
+				                    <li class="nav-parent">
+				                        <a class="nav-link" href="#">
+				                            <i class="fa fa-columns" aria-hidden="true"></i>
+				                            <span>Layouts</span>
+				                        </a>
+				                        <ul class="nav nav-children">
+				                            <li>
+				                                <a class="nav-link" href="index.html">
+				                                    Landing Page
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="layouts-default.html">
+				                                    Default
+				                                </a>
+				                            </li>
+				                            <li class="nav-parent">
+				                                <a>
+				                                    Boxed
+				                                </a>
+				                                <ul class="nav nav-children">
+				                                    <li>
+				                                        <a class="nav-link" href="layouts-boxed.html">
+				                                            Static Header
+				                                        </a>
+				                                    </li>
+				                                    <li>
+				                                        <a class="nav-link" href="layouts-boxed-fixed-header.html">
+				                                            Fixed Header
+				                                        </a>
+				                                    </li>
+				                                </ul>
+				                            </li>
+				                            <li class="nav-parent">
+				                                <a>
+				                                    Horizontal Menu Header
+				                                </a>
+				                                <ul class="nav nav-children">
+				                                    <li>
+				                                        <a class="nav-link" href="layouts-header-menu.html">
+				                                            Pills
+				                                        </a>
+				                                    </li>
+				                                    <li>
+				                                        <a class="nav-link" href="layouts-header-menu-stripe.html">
+				                                            Stripe
+				                                        </a>
+				                                    </li>
+				                                    <li>
+				                                        <a class="nav-link" href="layouts-header-menu-top-line.html">
+				                                            Top Line
+				                                        </a>
+				                                    </li>
+				                                </ul>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="layouts-dark.html">
+				                                    Dark
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="layouts-dark-header.html">
+				                                    Dark Header
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="layouts-two-navigations.html">
+				                                    Two Navigations
+				                                </a>
+				                            </li>
+				                            <li class="nav-parent">
+				                                <a>
+				                                    Tab Navigation
+				                                </a>
+				                                <ul class="nav nav-children">
+				                                    <li>
+				                                        <a class="nav-link" href="layouts-tab-navigation-dark.html">
+				                                            Tab Navigation Dark
+				                                        </a>
+				                                    </li>
+				                                    <li>
+				                                        <a class="nav-link" href="layouts-tab-navigation.html">
+				                                            Tab Navigation Light
+				                                        </a>
+				                                    </li>
+				                                    <li>
+				                                        <a class="nav-link" href="layouts-tab-navigation-boxed.html">
+				                                            Tab Navigation Boxed
+				                                        </a>
+				                                    </li>
+				                                </ul>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="layouts-light-sidebar.html">
+				                                    Light Sidebar
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="layouts-left-sidebar-collapsed.html">
+				                                    Left Sidebar Collapsed
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="layouts-left-sidebar-scroll.html">
+				                                    Left Sidebar Scroll
+				                                </a>
+				                            </li>
+				                            <li class="nav-parent">
+				                                <a>
+				                                    Left Sidebar Big Icons
+				                                </a>
+				                                <ul class="nav nav-children">
+				                                    <li>
+				                                        <a class="nav-link" href="layouts-left-sidebar-big-icons.html">
+				                                            Left Sidebar Big Icons Dark
+				                                        </a>
+				                                    </li>
+				                                    <li>
+				                                        <a class="nav-link" href="layouts-left-sidebar-big-icons-light.html">
+				                                            Left Sidebar Big Icons Light
+				                                        </a>
+				                                    </li>
+				                                </ul>
+				                            </li>
+				                            <li class="nav-parent">
+				                                <a>
+				                                    Left Sidebar Panel
+				                                </a>
+				                                <ul class="nav nav-children">
+				                                    <li>
+				                                        <a class="nav-link" href="layouts-left-sidebar-panel.html">
+				                                            Left Sidebar Panel Dark
+				                                        </a>
+				                                    </li>
+				                                    <li>
+				                                        <a class="nav-link" href="layouts-left-sidebar-panel-light.html">
+				                                            Left Sidebar Panel Light
+				                                        </a>
+				                                    </li>
+				                                </ul>
+				                            </li>
+				                            <li class="nav-parent">
+				                                <a>
+				                                    Left Sidebar Sizes
+				                                </a>
+				                                <ul class="nav nav-children">
+				                                    <li>
+				                                        <a class="nav-link" href="layouts-sidebar-sizes-xs.html">
+				                                            Left Sidebar XS
+				                                        </a>
+				                                    </li>
+				                                    <li>
+				                                        <a class="nav-link" href="layouts-sidebar-sizes-sm.html">
+				                                            Left Sidebar SM
+				                                        </a>
+				                                    </li>
+				                                    <li>
+				                                        <a class="nav-link" href="layouts-sidebar-sizes-md.html">
+				                                            Left Sidebar MD
+				                                        </a>
+				                                    </li>
+				                                </ul>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="layouts-square-borders.html">
+				                                    Square Borders
+				                                </a>
+				                            </li>
+				                        </ul>
+				                    </li>
+				                    <li class="nav-parent nav-expanded nav-active">
+				                        <a class="nav-link" href="#">
+				                            <i class="fa fa-copy" aria-hidden="true"></i>
+				                            <span>Pages</span>
+				                        </a>
+				                        <ul class="nav nav-children">
+				                            <li>
+				                                <a class="nav-link" href="pages-signup.html">
+				                                    Sign Up
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="pages-signin.html">
+				                                    Sign In
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="pages-recover-password.html">
+				                                    Recover Password
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="pages-lock-screen.html">
+				                                    Locked Screen
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="pages-user-profile.html">
+				                                    User Profile
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="pages-session-timeout.html">
+				                                    Session Timeout
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="pages-calendar.html">
+				                                    Calendar
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="pages-timeline.html">
+				                                    Timeline
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="pages-media-gallery.html">
+				                                    Media Gallery
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="pages-invoice.html">
+				                                    Invoice
+				                                </a>
+				                            </li>
+				                            <li class="nav-active">
+				                                <a class="nav-link" href="pages-blank.html">
+				                                    Blank Page
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="pages-404.html">
+				                                    404
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="pages-500.html">
+				                                    500
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="pages-log-viewer.html">
+				                                    Log Viewer
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="pages-search-results.html">
+				                                    Search Results
+				                                </a>
+				                            </li>
+				                        </ul>
+				                    </li>
+				                    <li class="nav-parent">
+				                        <a class="nav-link" href="#">
+				                            <i class="fa fa-tasks" aria-hidden="true"></i>
+				                            <span>UI Elements</span>
+				                        </a>
+				                        <ul class="nav nav-children">
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-typography.html">
+				                                    Typography
+				                                </a>
+				                            </li>
+				                            <li class="nav-parent">
+				                                <a class="nav-link" href="#">
+				                                    Icons <span class="mega-sub-nav-toggle toggled float-right" data-toggle="collapse" data-target=".mega-sub-nav-sub-menu-1"></span>
+				                                </a>
+				                                <ul class="nav nav-children">
+				                                    <li>
+				                                        <a class="nav-link" href="ui-elements-icons-elusive.html">
+				                                            Elusive
+				                                        </a>
+				                                    </li>
+				                                    <li>
+				                                        <a class="nav-link" href="ui-elements-icons-font-awesome.html">
+				                                            Font Awesome
+				                                        </a>
+				                                    </li>
+				                                    <li>
+				                                        <a class="nav-link" href="ui-elements-icons-line-icons.html">
+				                                            Line Icons
+				                                        </a>
+				                                    </li>
+				                                    <li>
+				                                        <a class="nav-link" href="ui-elements-icons-meteocons.html">
+				                                            Meteocons
+				                                        </a>
+				                                    </li>
+				                                </ul>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-tabs.html">
+				                                    Tabs
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-cards.html">
+				                                    Cards
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-widgets.html">
+				                                    Widgets
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-portlets.html">
+				                                    Portlets
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-buttons.html">
+				                                    Buttons
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-alerts.html">
+				                                    Alerts
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-notifications.html">
+				                                    Notifications
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-modals.html">
+				                                    Modals
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-lightbox.html">
+				                                    Lightbox
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-progressbars.html">
+				                                    Progress Bars
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-sliders.html">
+				                                    Sliders
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-carousels.html">
+				                                    Carousels
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-accordions.html">
+				                                    Accordions
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-toggles.html">
+				                                    Toggles
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-nestable.html">
+				                                    Nestable
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-tree-view.html">
+				                                    Tree View
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-scrollable.html">
+				                                    Scrollable
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-grid-system.html">
+				                                    Grid System
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-charts.html">
+				                                    Charts
+				                                </a>
+				                            </li>
+				                            <li class="nav-parent">
+				                                <a class="nav-link" href="#">
+				                                    Animations <span class="mega-sub-nav-toggle float-right" data-toggle="collapse" data-target=".mega-sub-nav-sub-menu-2"></span>
+				                                </a>
+				                                <ul class="nav nav-children">
+				                                    <li>
+				                                        <a class="nav-link" href="ui-elements-animations-appear.html">
+				                                            Appear
+				                                        </a>
+				                                    </li>
+				                                    <li>
+				                                        <a class="nav-link" href="ui-elements-animations-hover.html">
+				                                            Hover
+				                                        </a>
+				                                    </li>
+				                                </ul>
+				                            </li>
+				                            <li class="nav-parent">
+				                                <a class="nav-link" href="#">
+				                                    Loading <span class="mega-sub-nav-toggle float-right" data-toggle="collapse" data-target=".mega-sub-nav-sub-menu-3"></span>
+				                                </a>
+				                                <ul class="nav nav-children">
+				                                    <li>
+				                                        <a class="nav-link" href="ui-elements-loading-overlay.html">
+				                                            Overlay
+				                                        </a>
+				                                    </li>
+				                                    <li>
+				                                        <a class="nav-link" href="ui-elements-loading-progress.html">
+				                                            Progress
+				                                        </a>
+				                                    </li>
+				                                </ul>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="ui-elements-extra.html">
+				                                    Extra
+				                                </a>
+				                            </li>
+				                        </ul>
+				                    </li>
+				                    <li class="nav-parent">
+				                        <a class="nav-link" href="#">
+				                            <i class="fa fa-list-alt" aria-hidden="true"></i>
+				                            <span>Forms</span>
+				                        </a>
+				                        <ul class="nav nav-children">
+				                            <li>
+				                                <a class="nav-link" href="forms-basic.html">
+				                                    Basic
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="forms-advanced.html">
+				                                    Advanced
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="forms-validation.html">
+				                                    Validation
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="forms-layouts.html">
+				                                    Layouts
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="forms-wizard.html">
+				                                    Wizard
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="forms-code-editor.html">
+				                                    Code Editor
+				                                </a>
+				                            </li>
+				                        </ul>
+				                    </li>
+				                    <li class="nav-parent">
+				                        <a class="nav-link" href="#">
+				                            <i class="fa fa-table" aria-hidden="true"></i>
+				                            <span>Tables</span>
+				                        </a>
+				                        <ul class="nav nav-children">
+				                            <li>
+				                                <a class="nav-link" href="tables-basic.html">
+				                                    Basic
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="tables-advanced.html">
+				                                    Advanced
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="tables-responsive.html">
+				                                    Responsive
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="tables-editable.html">
+				                                    Editable
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="tables-ajax.html">
+				                                    Ajax
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="tables-pricing.html">
+				                                    Pricing
+				                                </a>
+				                            </li>
+				                        </ul>
+				                    </li>
+				                    <li>
+				                        <a class="nav-link" href="mailbox-folder.html">
+				                            <span class="float-right badge badge-primary">182</span>
+				                            <i class="fa fa-envelope" aria-hidden="true"></i>
+				                            <span>Mailbox</span>
+				                        </a>
+				                    </li>
+				                    <li class="nav-parent">
+				                        <a class="nav-link" href="#">
+				                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+				                            <span>Maps</span>
+				                        </a>
+				                        <ul class="nav nav-children">
+				                            <li>
+				                                <a class="nav-link" href="maps-google-maps.html">
+				                                    Basic
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="maps-google-maps-builder.html">
+				                                    Map Builder
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="maps-vector.html">
+				                                    Vector
+				                                </a>
+				                            </li>
+				                        </ul>
+				                    </li>
+				                    <li class="nav-parent">
+				                        <a class="nav-link" href="#">
+				                            <i class="fa fa-asterisk" aria-hidden="true"></i>
+				                            <span>Extra</span>
+				                        </a>
+				                        <ul class="nav nav-children">
+				                            <li>
+				                                <a class="nav-link" href="extra-changelog.html">
+				                                    Changelog
+				                                </a>
+				                            </li>
+				                            <li>
+				                                <a class="nav-link" href="extra-ajax-made-easy.html">
+				                                    Ajax Made Easy
+				                                </a>
+				                            </li>
+				                        </ul>
+				                    </li>
+				                    <li>
+				                        <a class="nav-link" href="http://themeforest.net/item/porto-responsive-html5-template/4106987?ref=Okler">
+				                            <i class="fa fa-external-link" aria-hidden="true"></i>
+				                            <span>Front-End <em class="not-included">(Not Included)</em></span>
+				                        </a>
+				                    </li>
+				                    <li class="nav-parent">
+				                        <a class="nav-link" href="#">
+				                            <i class="fa fa-align-left" aria-hidden="true"></i>
+				                            <span>Menu Levels</span>
+				                        </a>
+				                        <ul class="nav nav-children">
+				                            <li>
+				                                <a>
+				                                    First Level
+				                                </a>
+				                            </li>
+				                            <li class="nav-parent">
+				                                <a class="nav-link" href="#">
+				                                    Second Level
+				                                </a>
+				                                <ul class="nav nav-children">
+				                                    <li>
+				                                        <a>
+				                                            Second Level Link #1
+				                                        </a>
+				                                    </li>
+				                                    <li>
+				                                        <a>
+				                                            Second Level Link #2
+				                                        </a>
+				                                    </li>
+				                                    <li class="nav-parent">
+				                                        <a class="nav-link" href="#">
+				                                            Third Level
+				                                        </a>
+				                                        <ul class="nav nav-children">
+				                                            <li>
+				                                                <a>
+				                                                    Third Level Link #1
+				                                                </a>
+				                                            </li>
+				                                            <li>
+				                                                <a>
+				                                                    Third Level Link #2
+				                                                </a>
+				                                            </li>
+				                                        </ul>
+				                                    </li>
+				                                </ul>
+				                            </li>
+				                        </ul>
+				                    </li>
+
+				                </ul>
+				            </nav>
+
+				            <hr class="separator" />
+
+				            <div class="sidebar-widget widget-tasks">
+				                <div class="widget-header">
+				                    <h6>Projects</h6>
+				                    <div class="widget-toggle">+</div>
+				                </div>
+				                <div class="widget-content">
+				                    <ul class="list-unstyled m-0">
+				                        <li><a href="#">Porto HTML5 Template</a></li>
+				                        <li><a href="#">Tucson Template</a></li>
+				                        <li><a href="#">Porto Admin</a></li>
+				                    </ul>
+				                </div>
+				            </div>
+
+				            <hr class="separator" />
+
+				            <div class="sidebar-widget widget-stats">
+				                <div class="widget-header">
+				                    <h6>Company Stats</h6>
+				                    <div class="widget-toggle">+</div>
+				                </div>
+				                <div class="widget-content">
+				                    <ul>
+				                        <li>
+				                            <span class="stats-title">Stat 1</span>
+				                            <span class="stats-complete">85%</span>
+				                            <div class="progress">
+				                                <div class="progress-bar progress-bar-primary progress-without-number" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+				                                    <span class="sr-only">85% Complete</span>
+				                                </div>
+				                            </div>
+				                        </li>
+				                        <li>
+				                            <span class="stats-title">Stat 2</span>
+				                            <span class="stats-complete">70%</span>
+				                            <div class="progress">
+				                                <div class="progress-bar progress-bar-primary progress-without-number" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+				                                    <span class="sr-only">70% Complete</span>
+				                                </div>
+				                            </div>
+				                        </li>
+				                        <li>
+				                            <span class="stats-title">Stat 3</span>
+				                            <span class="stats-complete">2%</span>
+				                            <div class="progress">
+				                                <div class="progress-bar progress-bar-primary progress-without-number" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+				                                    <span class="sr-only">2% Complete</span>
+				                                </div>
+				                            </div>
+				                        </li>
+				                    </ul>
+				                </div>
+				            </div>
+				        </div>
+
+				        <script>
+				            // Maintain Scroll Position
+				            if (typeof localStorage !== 'undefined') {
+				                if (localStorage.getItem('sidebar-left-position') !== null) {
+				                    var initialPosition = localStorage.getItem('sidebar-left-position'),
+				                        sidebarLeft = document.querySelector('#sidebar-left .nano-content');
+
+				                    sidebarLeft.scrollTop = initialPosition;
+				                }
+				            }
+				        </script>
+
+
+				    </div>
+
+				</aside>
+				<!-- end: sidebar -->
+
+				<section role="main" class="content-body">
+					<header class="page-header">
+						<h2>Blank Page</h2>
+
+						<div class="right-wrapper text-right">
+							<ol class="breadcrumbs">
+								<li>
+									<a href="index.html">
+										<i class="fa fa-home"></i>
+									</a>
+								</li>
+								<li><span>Pages</span></li>
+								<li><span>Blank Page</span></li>
+							</ol>
+
+							<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+						</div>
+					</header>
+
+					<!-- start: page -->
+					<!-- end: page -->
+				</section>
 			</div>
-			<!-- end:: Body -->
-			<!-- begin::Footer -->
-			<footer class="m-grid__item		m-footer ">
-				<div class="m-container m-container--fluid m-container--full-height m-page__container">
-					<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
-						<div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
-							<span class="m-footer__copyright">
-								2018 &copy; Metronic theme by
-								<a href="https://keenthemes.com" class="m-link">
-									Keenthemes
-								</a>
-							</span>
+
+			<aside id="sidebar-right" class="sidebar-right">
+				<div class="nano">
+					<div class="nano-content">
+						<a href="#" class="mobile-close d-md-none">
+							Collapse <i class="fa fa-chevron-right"></i>
+						</a>
+
+						<div class="sidebar-right-wrapper">
+
+							<div class="sidebar-widget widget-calendar">
+								<h6>Upcoming Tasks</h6>
+								<div data-plugin-datepicker data-plugin-skin="dark"></div>
+
+								<ul>
+									<li>
+										<time datetime="2017-04-19T00:00+00:00">04/19/2017</time>
+										<span>Company Meeting</span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="sidebar-widget widget-friends">
+								<h6>Friends</h6>
+								<ul>
+									<li class="status-online">
+										<figure class="profile-picture">
+											<img src="img/!sample-user.jpg" alt="Joseph Doe" class="rounded-circle">
+										</figure>
+										<div class="profile-info">
+											<span class="name">Joseph Doe Junior</span>
+											<span class="title">Hey, how are you?</span>
+										</div>
+									</li>
+									<li class="status-online">
+										<figure class="profile-picture">
+											<img src="img/!sample-user.jpg" alt="Joseph Doe" class="rounded-circle">
+										</figure>
+										<div class="profile-info">
+											<span class="name">Joseph Doe Junior</span>
+											<span class="title">Hey, how are you?</span>
+										</div>
+									</li>
+									<li class="status-offline">
+										<figure class="profile-picture">
+											<img src="img/!sample-user.jpg" alt="Joseph Doe" class="rounded-circle">
+										</figure>
+										<div class="profile-info">
+											<span class="name">Joseph Doe Junior</span>
+											<span class="title">Hey, how are you?</span>
+										</div>
+									</li>
+									<li class="status-offline">
+										<figure class="profile-picture">
+											<img src="img/!sample-user.jpg" alt="Joseph Doe" class="rounded-circle">
+										</figure>
+										<div class="profile-info">
+											<span class="name">Joseph Doe Junior</span>
+											<span class="title">Hey, how are you?</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+
 						</div>
 					</div>
 				</div>
-			</footer>
-			<!-- end::Footer -->
-		</div>
-		<!-- end:: Page -->
-	    <!-- begin::Scroll Top -->
-		<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500" data-scroll-speed="300">
-			<i class="la la-arrow-up"></i>
-		</div>
-		<!-- end::Scroll Top -->
-    	<!--begin::Base Scripts -->
-		<script src="{{asset('assets/vendors/base/vendors.bundle.js')}}" type="text/javascript"></script>
-		<script src="{{asset('assets/demo/default/base/scripts.bundle.js')}}" type="text/javascript"></script>
-		<script src="{{asset('src/js/framework/components/general/datatable/datatable.js')}}" type="text/javascript"></script>
-		<!--end::Base Scripts -->
-        <!--begin::Page Vendors -->
-		<script src="{{asset('assets/vendors/custom/fullcalendar/fullcalendar.bundle.js')}}" type="text/javascript"></script>
-		<!--end::Page Vendors -->
-        <!--begin::Page Snippets -->
-		<script src="{{asset('assets/app/js/dashboard.js')}}" type="text/javascript"></script>
-		<!--end::Page Snippets -->
-		@yield('js-scripts')
+			</aside>
+		</section>
+
+		<!-- Vendor -->
+		<script src="{{ asset('vendor/jquery/jquery.js') }}"></script>
+		<script src="{{ asset('vendor/jquery-browser-mobile/jquery.browser.mobile.js') }}"></script>
+		<script src="{{ asset('vendor/popper/umd/popper.min.js') }}"></script>
+		<script src="{{ asset('vendor/bootstrap/js/bootstrap.js') }}"></script>
+		<script src="{{ asset('vendor/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
+		<script src="{{ asset('vendor/common/common.js') }}"></script>
+		<script src="{{ asset('vendor/nanoscroller/nanoscroller.js') }}"></script>
+		<script src="{{asset('vendor/magnific-popup/jquery.magnific-popup.js')}}"></script>
+		<script src="{{ asset('vendor/jquery-placeholder/jquery-placeholder.js') }}"></script>
+
+		<!-- Theme Base, Components and Settings -->
+		<script src="{{ asset('js/theme.js') }}"></script>
+
+		<!-- Theme Custom -->
+		<script src="{{ asset('js/custom.js') }}"></script>
+
+		<!-- Theme Initialization Files -->
+		<script src="{{ asset('js/theme.init.js') }}"></script>
+
 	</body>
-	<!-- end::Body -->
 </html>
