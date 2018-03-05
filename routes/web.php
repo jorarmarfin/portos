@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/', 'Homecontroller@index')->name('home.index');
+Route::get('/', 'HomeController@index')->name('home.index');
 
 Auth::routes();
 Route::get('logitos', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
