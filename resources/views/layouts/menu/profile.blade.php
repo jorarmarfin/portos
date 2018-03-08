@@ -1,32 +1,25 @@
-<ul class="m-nav m-nav--skin-light">
-@foreach ($items as $profile)
-	<li id="menu_{{ $profile['id'] }}" {!! Html::classes('m-nav__item', $profile['class']) !!}>
-		<a  href="{{ $profile['url'] }}" class="m-nav__link">
+<ul class="list-unstyled mb-2">
+	<li class="divider"></li>
+	@foreach ($items as $profile)
+	<li id="menu_{{ $profile['id'] }}">
+		<a role="menuitem" tabindex="-1" href="{{ $profile['url'] }}">
 			@if (isset($profile['icon']))
-				<i class="m-nav__link-icon {{ $profile['icon'] }}"></i>
+				<i class="{{ $profile['icon'] }}"></i>
 			@else
-				<i class="m-nav__link-icon flaticon-layers"></i>
+				<i class="fa fa-user"></i>
 			@endif
-			<span class="m-nav__link-title">
-				<span class="m-nav__link-wrap">
-					<span class="m-nav__link-text">
-					{{ $profile['title'] }}
-					</span>
-					<span class="m-nav__link-badge">
-					</span>
-				</span>
-			</span>
+			{{ $profile['title'] }}
 		</a>
 	</li>
-@endforeach
-	<li class="m-nav__item">
-		<a href="{{ route('logout') }}" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder"
-		 	onclick="event.preventDefault();
-				document.getElementById('logout-form').submit();">
-			Logout
-		</a>
-		<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            @csrf
-        </form>
+	@endforeach
+	<li>
+		<a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="fa fa-lock" ></i> Bloquear</a>
+	</li>
+	<li>
+		<a role="menuitem" tabindex="-1" href="{{ route('logout') }}" onclick="event.preventDefault();
+				document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Logout</a>
+				<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+		            @csrf
+		        </form>
 	</li>
 </ul>

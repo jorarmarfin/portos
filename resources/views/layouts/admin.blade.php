@@ -234,26 +234,15 @@
 								<img src="img/!logged-user.jpg" alt="Joseph Doe" class="rounded-circle" data-lock-picture="img/!logged-user.jpg" />
 							</figure>
 							<div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
-								<span class="name">John Doe Junior</span>
-								<span class="role">administrator</span>
+								<span class="name">{{ $user->name }}</span>
+								<span class="role">{{ $user->role_data->nombre }}</span>
 							</div>
 
 							<i class="fa custom-caret"></i>
 						</a>
 
 						<div class="dropdown-menu">
-							<ul class="list-unstyled mb-2">
-								<li class="divider"></li>
-								<li>
-									<a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i class="fa fa-user"></i> My Profile</a>
-								</li>
-								<li>
-									<a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="fa fa-lock"></i> Lock Screen</a>
-								</li>
-								<li>
-									<a role="menuitem" tabindex="-1" href="pages-signin.html"><i class="fa fa-power-off"></i> Logout</a>
-								</li>
-							</ul>
+							{!! Menu::make($profile)->render('layouts.menu.profile') !!}
 						</div>
 					</div>
 				</div>
@@ -277,63 +266,7 @@
 				    <div class="nano">
 				        <div class="nano-content">
 				            <nav id="menu" class="nav-main" role="navigation">
-
-				                <ul class="nav nav-main">
-				                    <li>
-				                        <a class="nav-link" href="layouts-default.html">
-				                            <i class="fa fa-home" aria-hidden="true"></i>
-				                            <span>Escritorio</span>
-				                        </a>
-				                    </li>
-				                    <li class="nav-parent">
-				                        <a class="nav-link" href="#">
-				                            <i class="fa fa-align-left" aria-hidden="true"></i>
-				                            <span>Menu Levels</span>
-				                        </a>
-				                        <ul class="nav nav-children">
-				                            <li>
-				                                <a>
-				                                    First Level
-				                                </a>
-				                            </li>
-				                            <li class="nav-parent">
-				                                <a class="nav-link" href="#">
-				                                    Second Level
-				                                </a>
-				                                <ul class="nav nav-children">
-				                                    <li>
-				                                        <a>
-				                                            Second Level Link #1
-				                                        </a>
-				                                    </li>
-				                                    <li>
-				                                        <a>
-				                                            Second Level Link #2
-				                                        </a>
-				                                    </li>
-				                                    <li class="nav-parent">
-				                                        <a class="nav-link" href="#">
-				                                            Third Level
-				                                        </a>
-				                                        <ul class="nav nav-children">
-				                                            <li>
-				                                                <a>
-				                                                    Third Level Link #1
-				                                                </a>
-				                                            </li>
-				                                            <li>
-				                                                <a>
-				                                                    Third Level Link #2
-				                                                </a>
-				                                            </li>
-				                                        </ul>
-				                                    </li>
-				                                </ul>
-				                            </li>
-				                        </ul>
-				                    </li>
-
-				                </ul>
+								{!! Menu::make($items)->render('layouts.menu.side-right') !!}
 				            </nav>
 
 				        </div>
