@@ -39,8 +39,13 @@ class User extends Authenticatable
     */
     public function getUserFotoAttribute()
     {
-        $foto = asset('/storage/'.$this->foto);
-        return $foto;
+        if (str_contains($this->foto,'profile.jpeg') || str_contains($this->foto,'user.jpg')) {
+            return asset($this->foto);
+        }else{
+
+            $foto = asset('/storage/'.$this->foto);
+            return $foto;
+        }
     }
     /**
     * Atributos Rol

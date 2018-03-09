@@ -18,6 +18,7 @@ class UserTableSeeder extends Seeder
             'email' => 'luis.mayta@gmail.com',
             'password' => '321654987',
             'idrole' => Catalogo::IdCatalogo('ROLES','C','root'),
+            'foto'=>'img/profile.jpeg',
             'activo' => true,
             ]);
         factory(App\User::class)->create([

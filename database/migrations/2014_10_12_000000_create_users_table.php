@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->integer('idrole')->unsigned();
-            $table->string('foto',50)->default('nofoto.jpg');
+            $table->string('foto',50)->default('img/user.jpg');
             $table->boolean('activo')->nullable();
             $table->rememberToken();
             $table->timestamps();

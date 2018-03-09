@@ -10,3 +10,6 @@ Route::namespace('Admin')->middleware('auth')->name('admin.')->group(function(){
 Route::namespace('Admin\Catalogo')->middleware('auth')->name('admin.')->group(function(){
 	require __DIR__.'/catalogo/CatalogoRoute.php';
 });
+Route::namespace('Admin\Profile')->middleware('auth')->name('admin.')->group(function(){
+	require __DIR__.'/profile/ProfileRoute.php';
+});

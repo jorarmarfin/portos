@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="fixed ">
+<html class="fixed " lang="es">
 	<head>
 
 		<!-- Basic -->
@@ -231,7 +231,7 @@
 					<div id="userbox" class="userbox">
 						<a href="#" data-toggle="dropdown">
 							<figure class="profile-picture">
-								<img src="img/!logged-user.jpg" alt="Joseph Doe" class="rounded-circle" data-lock-picture="img/!logged-user.jpg" />
+								<img src="{{ $user->user_foto }}" alt="Joseph Doe" class="rounded-circle" data-lock-picture="img/!logged-user.jpg" />
 							</figure>
 							<div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
 								<span class="name">{{ $user->name }}</span>
@@ -309,6 +309,7 @@
 					</header>
 
 					<!-- start: page -->
+					@yield('content')
 					<!-- end: page -->
 				</section>
 			</div>
