@@ -18,7 +18,7 @@
 
 		<!-- Vendor CSS -->
 		<link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.css') }}" />
-		<link rel="stylesheet" href="vendor/animate/animate.css">
+		<link rel="stylesheet" href="{{ asset('vendor/animate/animate.css') }}">
 
 		<link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/font-awesome.css') }}" />
 		<link rel="stylesheet" href="{{asset('vendor/magnific-popup/magnific-popup.css')}}" />
@@ -35,6 +35,8 @@
 
 		<!-- Head Libs -->
 		<script src="{{ asset('vendor/modernizr/modernizr.js') }}"></script>
+		<!--Favicon-->
+		<link rel="shortcut icon" href="{{ asset('img/favicon.ic') }}o" type="image/x-icon" />
 
 	</head>
 	<body>
@@ -43,8 +45,8 @@
 			<!-- start: header -->
 			<header class="header">
 				<div class="logo-container">
-					<a href="../2.0.0" class="logo">
-						<img src="img/logo.png" width="75" height="35" alt="Porto Admin" />
+					<a href="{{ route('admin.index') }}" class="logo">
+						<img src="{{ asset('img/logo.png') }}" width="75" height="35" alt="Porto Admin" />
 					</a>
 					<div class="d-md-none toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
 						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
@@ -326,56 +328,8 @@
 							<div class="sidebar-widget widget-calendar">
 								<h6>Upcoming Tasks</h6>
 								<div data-plugin-datepicker data-plugin-skin="dark"></div>
-
-								<ul>
-									<li>
-										<time datetime="2017-04-19T00:00+00:00">04/19/2017</time>
-										<span>Company Meeting</span>
-									</li>
-								</ul>
 							</div>
 
-							<div class="sidebar-widget widget-friends">
-								<h6>Friends</h6>
-								<ul>
-									<li class="status-online">
-										<figure class="profile-picture">
-											<img src="img/!sample-user.jpg" alt="Joseph Doe" class="rounded-circle">
-										</figure>
-										<div class="profile-info">
-											<span class="name">Joseph Doe Junior</span>
-											<span class="title">Hey, how are you?</span>
-										</div>
-									</li>
-									<li class="status-online">
-										<figure class="profile-picture">
-											<img src="img/!sample-user.jpg" alt="Joseph Doe" class="rounded-circle">
-										</figure>
-										<div class="profile-info">
-											<span class="name">Joseph Doe Junior</span>
-											<span class="title">Hey, how are you?</span>
-										</div>
-									</li>
-									<li class="status-offline">
-										<figure class="profile-picture">
-											<img src="img/!sample-user.jpg" alt="Joseph Doe" class="rounded-circle">
-										</figure>
-										<div class="profile-info">
-											<span class="name">Joseph Doe Junior</span>
-											<span class="title">Hey, how are you?</span>
-										</div>
-									</li>
-									<li class="status-offline">
-										<figure class="profile-picture">
-											<img src="img/!sample-user.jpg" alt="Joseph Doe" class="rounded-circle">
-										</figure>
-										<div class="profile-info">
-											<span class="name">Joseph Doe Junior</span>
-											<span class="title">Hey, how are you?</span>
-										</div>
-									</li>
-								</ul>
-							</div>
 
 						</div>
 					</div>

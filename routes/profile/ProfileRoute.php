@@ -1,3 +1,3 @@
 <?php
 
-Route::view('profile','profile.index')->name('profile');
+Route::view('profile','profile.index')->name('profile.index');

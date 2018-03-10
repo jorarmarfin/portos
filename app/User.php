@@ -64,6 +64,14 @@ class User extends Authenticatable
         return $role;
     }
     /**
+    * Atributos Name
+    */
+    public function getNamePilaAttribute()
+    {
+        $name = explode(' ', $this->name);
+        return $name[0];
+    }
+    /**
      * Establecemos el la relacion con catalogo
      * @return [type] [description]
      */
