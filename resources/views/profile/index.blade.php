@@ -46,24 +46,22 @@
 								</ul>
 								<div class="tab-content">
 									<div id="edit" class="tab-pane active">
-										<form class="p-3">
+										{!! Form::model($user,['route'=>['admin.profile.update',$user],'method'=>'PUT','class'=>'p-3']) !!}
 											<div class="row form-group">
 							                	<div class="col-md-6">{!! Field::text('name',['label'=>'Nombre de usuario']) !!}</div>
 							                	<div class="col-md-6">{!! Field::text('email',['label'=>'Email de usuario']) !!}</div>
 							                </div><!--row-->
-							                {!! Field::select('idrole',$roles,[],['label'=>'Rol de usuario','empty'=>'Seleccionar']) !!}
+							                {!! Field::select('idrole',$roles,$user->idrole,['label'=>'Rol de usuario','empty'=>'Seleccionar']) !!}
 
 											<hr class="dotted tall">
 
-											<h4 class="mb-3">Change Password</h4>
+											<h4 class="mb-3">Cambiar contraseña</h4>
 											<div class="form-row">
 												<div class="form-group col-md-6">
-													<label for="inputPassword4">New Password</label>
-													<input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+													{!! Field::password('password',['label'=>'Nueva Clave']) !!}
 												</div>
 												<div class="form-group col-md-6">
-													<label for="inputPassword4">Re New Password</label>
-													<input type="password" class="form-control" id="inputPassword5" placeholder="Password">
+													{!! Field::password('password_confirmation',['label'=>'Ingresar de nuevo la clave']) !!}
 												</div>
 											</div>
 
@@ -73,8 +71,7 @@
 												</div>
 											</div>
 
-										</form>
-
+										{!! Form::close() !!}
 									</div>
 								</div>
 							</div>
