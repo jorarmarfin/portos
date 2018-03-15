@@ -21,9 +21,14 @@
 		<link rel="stylesheet" href="{{ asset('vendor/animate/animate.css') }}">
 
 		<link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/font-awesome.css') }}" />
-		<link rel="stylesheet" href="{{asset('vendor/magnific-popup/magnific-popup.css')}}" />
+		<link rel="stylesheet" href="{{ asset('vendor/magnific-popup/magnific-popup.css')}}" />
 		<link rel="stylesheet" href="{{ asset('vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css') }}" />
 
+		<link rel="stylesheet" href="{{ asset('vendor/select2/css/select2.css') }}" />
+		<link rel="stylesheet" href="{{ asset('vendor/select2-bootstrap-theme/select2-bootstrap.min.css') }}" />
+		<link rel="stylesheet" href="{{ asset('vendor/datatables/media/css/dataTables.bootstrap4.css') }}" />
+
+		@yield('css-plugins')
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="{{ asset('css/theme.css') }}" />
 
@@ -345,9 +350,12 @@
 		<script src="{{ asset('vendor/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
 		<script src="{{ asset('vendor/common/common.js') }}"></script>
 		<script src="{{ asset('vendor/nanoscroller/nanoscroller.js') }}"></script>
-		<script src="{{asset('vendor/magnific-popup/jquery.magnific-popup.js')}}"></script>
+		<script src="{{ asset('vendor/magnific-popup/jquery.magnific-popup.js')}}"></script>
 		<script src="{{ asset('vendor/jquery-placeholder/jquery-placeholder.js') }}"></script>
 
+		<script src="{{ asset('vendor/datatables/media/js/jquery.dataTables.min.js') }}"></script>
+		<script src="{{ asset('vendor/datatables/media/js/dataTables.bootstrap4.min.js') }}"></script>
+		@yield('js-plugins')
 		<!-- Theme Base, Components and Settings -->
 		<script src="{{ asset('js/theme.js') }}"></script>
 
@@ -357,5 +365,7 @@
 		<!-- Theme Initialization Files -->
 		<script src="{{ asset('js/theme.init.js') }}"></script>
 
+		<!-- Mis scripts -->
+		@yield('js-scripts')
 	</body>
 </html>
