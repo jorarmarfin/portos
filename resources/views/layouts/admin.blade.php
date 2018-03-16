@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="fixed " lang="es">
+<html class="fixed sidebar-left-collapsed" lang="es">
 	<head>
 
 		<!-- Basic -->
@@ -41,7 +41,7 @@
 		<!-- Head Libs -->
 		<script src="{{ asset('vendor/modernizr/modernizr.js') }}"></script>
 		<!--Favicon-->
-		<link rel="shortcut icon" href="{{ asset('img/favicon.ic') }}o" type="image/x-icon" />
+		<link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon" />
 
 	</head>
 	<body>
@@ -298,18 +298,9 @@
 
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2>Blank Page</h2>
+						<h2>{{ $titulo }}</h2>
 
 						<div class="right-wrapper text-right">
-							<ol class="breadcrumbs">
-								<li>
-									<a href="index.html">
-										<i class="fa fa-home"></i>
-									</a>
-								</li>
-								<li><span>Pages</span></li>
-								<li><span>Blank Page</span></li>
-							</ol>
 
 							<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
 						</div>
@@ -353,6 +344,8 @@
 		<script src="{{ asset('vendor/magnific-popup/jquery.magnific-popup.js')}}"></script>
 		<script src="{{ asset('vendor/jquery-placeholder/jquery-placeholder.js') }}"></script>
 
+		<!-- Specific Page Vendor -->
+		<script src="{{ asset('vendor/select2/js/select2.js') }}"></script>
 		<script src="{{ asset('vendor/datatables/media/js/jquery.dataTables.min.js') }}"></script>
 		<script src="{{ asset('vendor/datatables/media/js/dataTables.bootstrap4.min.js') }}"></script>
 		@yield('js-plugins')

@@ -18,7 +18,8 @@ class CatalogoController extends Controller
     public function index()
     {
         $Lista = Catalogo::all();
-        return view('admin.catalogo.index',compact('Lista'));
+        $titulo = $this->Titulo;
+        return view('admin.catalogo.index',compact('Lista','titulo'));
     }
 
     /**
