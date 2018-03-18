@@ -298,7 +298,7 @@
 
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2>{{ $titulo }}</h2>
+						<h2>@yield('titulo-pagina','Escritorio')</h2>
 
 						<div class="right-wrapper text-right">
 

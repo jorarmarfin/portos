@@ -13,6 +13,8 @@
 				<h2 class="card-title">Maestro</h2>
 			</header>
 			<div class="card-body">
+				<a href="#" class="mb-1 mt-1 mr-1 btn btn-primary">  Agregar <i class="fa fa-plus"></i></a>
+				<p></p>
 				<table class="table table-bordered table-striped table-responsive-lg mb-0 mytable">
 				    <thead>
 				        <tr>
@@ -81,6 +83,6 @@ $('.mytable').dataTable({
 </script>
 @stop
 
-
+@section('titulo-pagina',$titulo);
 
 
