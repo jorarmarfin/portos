@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="fixed " lang="es">
+<html class="fixed sidebar-left-collapsed" lang="es">
 	<head>
 
 		<!-- Basic -->
@@ -21,9 +21,14 @@
 		<link rel="stylesheet" href="{{ asset('vendor/animate/animate.css') }}">
 
 		<link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/font-awesome.css') }}" />
-		<link rel="stylesheet" href="{{asset('vendor/magnific-popup/magnific-popup.css')}}" />
+		<link rel="stylesheet" href="{{ asset('vendor/magnific-popup/magnific-popup.css')}}" />
 		<link rel="stylesheet" href="{{ asset('vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css') }}" />
 
+		<link rel="stylesheet" href="{{ asset('vendor/select2/css/select2.css') }}" />
+		<link rel="stylesheet" href="{{ asset('vendor/select2-bootstrap-theme/select2-bootstrap.min.css') }}" />
+		<link rel="stylesheet" href="{{ asset('vendor/datatables/media/css/dataTables.bootstrap4.css') }}" />
+
+		@yield('css-plugins')
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="{{ asset('css/theme.css') }}" />
 
@@ -36,7 +41,7 @@
 		<!-- Head Libs -->
 		<script src="{{ asset('vendor/modernizr/modernizr.js') }}"></script>
 		<!--Favicon-->
-		<link rel="shortcut icon" href="{{ asset('img/favicon.ic') }}o" type="image/x-icon" />
+		<link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon" />
 
 	</head>
 	<body>
@@ -293,18 +298,9 @@
 
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2>Blank Page</h2>
+						<h2>@yield('titulo-pagina','Escritorio')</h2>
 
 						<div class="right-wrapper text-right">
-							<ol class="breadcrumbs">
-								<li>
-									<a href="index.html">
-										<i class="fa fa-home"></i>
-									</a>
-								</li>
-								<li><span>Pages</span></li>
-								<li><span>Blank Page</span></li>
-							</ol>
 
 							<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
 						</div>
@@ -345,9 +341,14 @@
 		<script src="{{ asset('vendor/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
 		<script src="{{ asset('vendor/common/common.js') }}"></script>
 		<script src="{{ asset('vendor/nanoscroller/nanoscroller.js') }}"></script>
-		<script src="{{asset('vendor/magnific-popup/jquery.magnific-popup.js')}}"></script>
+		<script src="{{ asset('vendor/magnific-popup/jquery.magnific-popup.js')}}"></script>
 		<script src="{{ asset('vendor/jquery-placeholder/jquery-placeholder.js') }}"></script>
 
+		<!-- Specific Page Vendor -->
+		<script src="{{ asset('vendor/select2/js/select2.js') }}"></script>
+		<script src="{{ asset('vendor/datatables/media/js/jquery.dataTables.min.js') }}"></script>
+		<script src="{{ asset('vendor/datatables/media/js/dataTables.bootstrap4.min.js') }}"></script>
+		@yield('js-plugins')
 		<!-- Theme Base, Components and Settings -->
 		<script src="{{ asset('js/theme.js') }}"></script>
 
@@ -357,5 +358,7 @@
 		<!-- Theme Initialization Files -->
 		<script src="{{ asset('js/theme.init.js') }}"></script>
 
+		<!-- Mis scripts -->
+		@yield('js-scripts')
 	</body>
 </html>

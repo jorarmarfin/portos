@@ -22,7 +22,7 @@ class ControlMenu
 							'Usuarios'=>['url'=>'#','roles'=>['root']]
 						]
 			],
-			'contact-us' => ['full_url' => 'http://contact.us','roles'=>['admin','root']]
+			'contact-us' => ['url' => '#','roles'=>['admin','root']]
 		];
 		$profile = [
 			'Mi perfil' => ['route'=>'admin.profile.index'],

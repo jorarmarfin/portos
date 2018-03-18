@@ -1,57 +1,88 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="m-portlet m-portlet--mobile">
-	<div class="m-portlet__head">
-		<div class="m-portlet__head-caption">
-			<div class="m-portlet__head-title">
-				<h3 class="m-portlet__head-text">
-					Catalogo <small>portlet sub title</small>
-				</h3>
+<div class="row">
+	<div class="col">
+		<section class="card">
+			<header class="card-header">
+				<div class="card-actions">
+					<a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+					<a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
+				</div>
+
+				<h2 class="card-title">Maestro</h2>
+			</header>
+			<div class="card-body">
+				<a href="#" class="mb-1 mt-1 mr-1 btn btn-primary">  Agregar <i class="fa fa-plus"></i></a>
+				<p></p>
+				<table class="table table-bordered table-striped table-responsive-lg mb-0 mytable">
+				    <thead>
+				        <tr>
+				            <th> Id </th>
+				            <th> IdTable </th>
+				            <th> IdItem </th>
+				            <th> Codigo </th>
+				            <th> Nombre </th>
+				            <th> Descripcion </th>
+				            <th> Valor </th>
+				            <th> Activo </th>
+				            <th> Opciones </th>
+				        </tr>
+				    </thead>
+				    <tbody>
+					@foreach ($Lista as $item)
+				        <tr >
+				            <td> {{ $item->id }} </td>
+				            <td> {{ $item->idtable }} </td>
+				            <td> {{ $item->iditem }} </td>
+				            <td> {{ $item->codigo }} </td>
+				            <td> {{ $item->nombre }} </td>
+				            <td> {{ $item->descripcion }} </td>
+				            <td> {{ $item->valor }} </td>
+				            <td>
+							@if ($item->activo)
+								<a href="#" class="badge badge-info">Activo</a>
+				            @else
+				            	<a href="#" class="badge badge-danger">Inactivo</a>
+							@endif
+				            </td>
+				            <td>
+				            	<a href="{{--route('admin.miembro.edit',$item->id)--}}" title="Editar" class="on-default">
+									<i class="fa fa-pencil"></i>
+								</a>
+								<a href="{{--route('admin.miembro.show',$item->id)--}}" title="Eliminar" class="on-default">
+									<i class="fa fa-trash"></i>
+								</a>
+				            </td>
+				        </tr>
+					@endforeach
+				    </tbody>
+				</table>
 			</div>
-		</div>
-	</div>
-	<div class="m-portlet__body">
-		<table class="table m-table table-striped m-table--head-bg-success">
-		    <thead>
-		        <tr>
-		            <th> Codigo </th>
-		            <th> Nombre </th>
-		            <th> Fecha </th>
-		            <th> Observacion </th>
-		            <th> Activo </th>
-		            <th> Opciones </th>
-		        </tr>
-		    </thead>
-		    <tbody>
-			@foreach ($Lista as $item)
-		        <tr >
-		            <td> {{ $item->codigo }} </td>
-		            <td> {{ $item->nombre }} </td>
-		            <td> {{ $item->fecha }} </td>
-		            <td>
-					@if ($item->activo)
-						<a href="#" class="label label-sm label-info">Activo</a>
-		            @else
-		            	<a href="#" class="label label-sm label-danger">Inactivo</a>
-					@endif
-		            </td>
-		            <td> {{ $item->observacion }} </td>
-		            <td>
-		            	<a href="{{--route('admin.miembro.edit',$item->id)--}}" title="Editar"class="btn btn-icon-only green-haze">
-							<i class="fa fa-edit"></i>
-						</a>
-						<a href="{{--route('admin.miembro.show',$item->id)--}}" title="Eliminar" class="btn -btn-icon-only red">
-							<i class="fa fa-trash"></i>
-						</a>
-						<a href="{{--route('credentials.cne.list',$item->id)--}}" title="Lista" class="btn -btn-icon-only green-jungle">
-							<i class="fa fa-eye"></i>
-						</a>
-		            </td>
-		        </tr>
-			@endforeach
-		    </tbody>
-		</table>
+		</section>
 	</div>
 </div>
 @endsection
+
+@section('js-scripts')
+<script>
+$('.mytable').dataTable({
+	"language": {
+        "emptyTable": "No hay datos disponibles",
+        "info": "Mostrando _START_ a _END_ de _TOTAL_ filas",
+        "lengthMenu": "_MENU_ registros",
+        paginate: {
+            first:      "Primero",
+            previous:   "Anterior",
+            next:       "Siguiente",
+            last:       "Ultimo"
+        },
+    },
+
+});
+</script>
+@stop
+
+@section('titulo-pagina',$titulo);
+
+
